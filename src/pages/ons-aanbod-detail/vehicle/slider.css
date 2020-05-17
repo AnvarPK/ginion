@@ -1,0 +1,36 @@
+button.slick-arrow.slick-next {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100px;
+    color: transparent;
+    /* background: url('./Vector-5.svg'),
+        linear-gradient(270deg, #515456 0%, #515456 28.63%, rgba(81, 84, 86, 0) 72.81%); */
+    background: url('./Vector-5.svg'),
+        linear-gradient(270deg, #515456 0%, #515456 28.63%, rgba(81, 84, 86, 0) 90.81%);
+    background-repeat: no-repeat;
+    background-position: 50px 50%, center center;
+    bottom: 0;
+}
+
+button.slick-prev {
+    /* display: none !important; */
+}
+
+button.slick-arrow.slick-prev {
+    position: absolute;
+    right: auto;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    color: transparent;
+    /* background: url('./Vector-5.svg'),
+        linear-gradient(270deg, rgba(81, 84, 86, 0) 0%, #515456 72.81%, #515456 28.63%); */
+    background: url('./Vector-5.svg'),
+        linear-gradient(270deg, rgba(81, 84, 86, 0) 0%, #515456 90.81%, #515456 28.63%);
+    background-repeat: no-repeat;
+    background-position: 50px 50%,
+        center center;
+    bottom: 0;
+    z-index: 1;
+}
