@@ -36,7 +36,8 @@ function App() {
 
 
   return (
-    <Router basename='/ginion'>
+    <Router >
+      {/* basename='/ginion' */}
       <ScrollToTop />
       <Header />
       <div className="contet-sec">
