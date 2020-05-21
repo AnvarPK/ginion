@@ -10,8 +10,8 @@ const Nl = () => (
         <div className="div-block-34">
             <div className="text-block-7">GARANTIES</div>
             <p>Bij Ginion Used Cars geniet elke auto van een garantie van 12 maanden.
-Al onze voertuigen werden grondig gecontroleerd door onze eigen specialisten. Na grondige
-technische en optische onderzoek garanderen wij de verkoop van kwaliteitsvoertuigen voor een
+            Al onze voertuigen werden grondig gecontroleerd door onze eigen specialisten. Na grondige
+            technische en optische onderzoek garanderen wij de verkoop van kwaliteitsvoertuigen voor een
 optimaal rijplezier.</p>
             {/* <ul className="list w-list-unstyled">
                 <li>
@@ -26,8 +26,8 @@ optimaal rijplezier.</p>
         <div className="div-block-34">
             <div className="text-block-7">Eigen werkplaats</div>
             <p>Ginion Used Cars heeft geïnvesteerd in een professioneel uitgeruste werkplaats in zijn concessie.
-Daar worden al onze aangekochte wagens gecontroleerd volgens de hoogste kwaliteitsstandaard
-door professioneel opgeleide technici. Op die manier zijn wij er zeker van dat we enkel de beste
+            Daar worden al onze aangekochte wagens gecontroleerd volgens de hoogste kwaliteitsstandaard
+            door professioneel opgeleide technici. Op die manier zijn wij er zeker van dat we enkel de beste
 tweedehandswagens aanbieden. U kan bij ons ook terecht voor onderhoud en herstellingen.</p>
             <p>Ontdek de aankoopvoordelen van een Ginion Used Cars gecertificeerde tweedehands auto:</p>
             <ul className="list w-list-unstyled">
@@ -92,9 +92,9 @@ const Fr = () => (
         <div className="div-block-34">
             <div className="text-block-7">GARANTIES</div>
             <p>Tous nos véhicules vendus sous le label « Ginion Used Cars » bénéficient de 12
-mois de garantie. Les voitures mises en vente sous le label ‘Ginion Used Cars’ ont
-été minutieusement inspectées par nos spécialistes. Après des examens techniques et
-optiques approfondis nous garantissons la vente de véhicules de qualité pour un plaisir de
+            mois de garantie. Les voitures mises en vente sous le label ‘Ginion Used Cars’ ont
+            été minutieusement inspectées par nos spécialistes. Après des examens techniques et
+            optiques approfondis nous garantissons la vente de véhicules de qualité pour un plaisir de
 conduite optimal.</p>
             {/* <ul className="list w-list-unstyled">
                 <li>
@@ -109,9 +109,9 @@ conduite optimal.</p>
         <div className="div-block-34">
             <div className="text-block-7">SERVICES</div>
             <p>Ginion Used Cars a investi dans un atelier équipé professionnellement. C’est à cet
-endroit que toutes nos voitures achetées sont vérifiées par nos techniciens formés
-professionnellement. De cette façon, nous sommes sûrs de proposer les meilleures
-voitures d&#39;occasion. Grâce à notre atelier, vous pouvez également nous contacter
+            endroit que toutes nos voitures achetées sont vérifiées par nos techniciens formés
+            professionnellement. De cette façon, nous sommes sûrs de proposer les meilleures
+            voitures d&#39;occasion. Grâce à notre atelier, vous pouvez également nous contacter
 pour l&#39;entretien et les réparations.<br /></p>
             <p>Découvrez les avantages de l’achat d’une voiture d’occasion certifiée Ginion Used Cars :</p>
             <ul className="list w-list-unstyled">
@@ -170,13 +170,19 @@ pour l&#39;entretien et les réparations.<br /></p>
     </div>
 )
 
+const gr = {
+    nl: "Garanties & Diensten", fr: "Garanties & services"
+}
+
+
+
 const GarantiesDiensten = (props) => {
     return (
         <>
             <div className="text-banner">
                 <div className="container-ginion">
                     <div className="div-block-30">
-                        <h1 className="heading-3">GARANTIES &amp; DIENSTEN</h1>
+                        <h1 className="heading-3">{gr[props.language.value]}</h1>
                     </div>
                 </div>
             </div>

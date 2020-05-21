@@ -8,8 +8,23 @@ import Insta from './Instagram.svg';
 import 'react-dropdown/style.css';
 import './style.css';
 
-
+const ons = {
+    nl: "ons aanbod", fr: "Notre assortiment"
+}
+const gr = {
+    nl: "Garanties & Diensten", fr: "Garanties & services"
+}
+const fn = {
+    nl: "FINANCIERING", fr: "Financement"
+}
+const ov = {
+    nl: "OVER ONS", fr: "A propos de nous"
+}
+const con = {
+    nl: "Contact", fr: "Contact"
+}
 const Navbar = ({ options, language, onChange }) => (
+
     <nav role="navigation" className="nav-menu w-nav-menu">
         <div className="div-block-4">
             <NavLink to={`/${language.value}`} aria-current="page"
@@ -18,11 +33,11 @@ const Navbar = ({ options, language, onChange }) => (
                 exact={true}
 
             >Home</NavLink>
-            <NavLink to={`/${language.value}/ons-aanbod`} activeClassName="w--current" className="nav-link-2 w-nav-link">ons aanbod</NavLink >
-            <NavLink to={`/${language.value}/garanties-diensten`} activeClassName="w--current" className="nav-link-2 w-nav-link">Garanties &amp; Diensten</NavLink>
-            <NavLink to={`/${language.value}/financiering`} activeClassName="w--current" className="nav-link-2 w-nav-link">FINANCIERING</NavLink>
-            <NavLink to={`/${language.value}/over-ons`} activeClassName="w--current" className="nav-link-2 w-nav-link">OVER ONS</NavLink>
-            <NavLink to={`/${language.value}/contact`} activeClassName="w--current" className="nav-link-2 w-nav-link">Contact</NavLink>
+            <NavLink to={`/${language.value}/ons-aanbod`} activeClassName="w--current" className="nav-link-2 w-nav-link">{ons[language.value]}</NavLink >
+            <NavLink to={`/${language.value}/garanties-diensten`} activeClassName="w--current" className="nav-link-2 w-nav-link">{gr[language.value]}</NavLink>
+            <NavLink to={`/${language.value}/financiering`} activeClassName="w--current" className="nav-link-2 w-nav-link">{fn[language.value]}</NavLink>
+            <NavLink to={`/${language.value}/over-ons`} activeClassName="w--current" className="nav-link-2 w-nav-link">{ov[language.value]}</NavLink>
+            <NavLink to={`/${language.value}/contact`} activeClassName="w--current" className="nav-link-2 w-nav-link">{con[language.value]}</NavLink>
         </div >
         <div className="div-block-2">
             <a href="https://www.facebook.com/giniongroup" target="_blank" className="link-block w-inline-block">

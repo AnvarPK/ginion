@@ -8,7 +8,7 @@ const MostViwed = (props) => {
         <div className="home-car-blocks">
             <div className="container-ginion">
                 <div className="div-block-19">
-                    <h2 className="heading-2 black-text">onze meest bekeken wagens</h2>
+                    <h2 className="heading-2 black-text">{props.lan.value === "nl" ? "onze meest bekeken wagens" : "Nos véhicules les plus consultés"}</h2>
                     <div className="div-block-23">
                         <div className="w-layout-grid grid">
                             {

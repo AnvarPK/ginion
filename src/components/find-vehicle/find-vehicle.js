@@ -66,15 +66,19 @@ const FindVehicle = ({ makes, models, language }) => {
         }),
     }
 
+    const zok = {
+        nl: "Zoek uw voertuig",
+        fr: "Chercher votre voiture"
+    }
 
     return (
         <>
             <div className="div-block-36" style={{ overflow: 'visible' }}>
                 <div className="div-block-35">
-                    <h5 className="heading-4">Zoek uw voertuig</h5>
+                    <h5 className="heading-4">{zok[language.value]}</h5>
                 </div>
                 <div className="form-block w-form">
-                    <div className="div-block-37" style={{ paddingBottom: 15 }}><label className="field-label">MERK</label>
+                    <div className="div-block-37" style={{ paddingBottom: 15 }}><label className="field-label">{language.value === "nl" ? "MERK" : "Marque"}</label>
                         <DropDownSelect
                             placeholder="Kies uw merk"
                             options={makes} tag="make"
@@ -84,7 +88,7 @@ const FindVehicle = ({ makes, models, language }) => {
 
                         />
                     </div>
-                    <div className="div-block-37" style={{ paddingBottom: 15 }}><label className="field-label">MODEL</label>
+                    <div className="div-block-37" style={{ paddingBottom: 15 }}><label className="field-label">{language.value === "nl" ? "MODEL" : "Modèle"}</label>
                         <DropDownSelect
                             placeholder="Kies uw model"
                             options={models} tag="model"

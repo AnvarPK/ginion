@@ -6,8 +6,9 @@ import Characteristics from './vehicle/characteristics';
 import Equipment from "./vehicle/equipment";
 import Warranties from '../../components/warranties';
 import GoogleMap from '../../components/google-map';
+import useFormatprice from '../../components/useFormatprice';
 
-const OnsAanbodDetail = ({ vehicle }) => (<>
+const OnsAanbodDetail = ({ vehicle, language }) => (<>
     <Header veh={vehicle} />
     <div className="detail-body">
         <div className="container-ginion">
@@ -26,15 +27,17 @@ const OnsAanbodDetail = ({ vehicle }) => (<>
                         <div>
                             <div className="div-block-36 detail-right-block">
                                 <div className="div-block-35 detail-block-1">
-                                    <h5 className="heading-4 detail-heading-4">€ 17.569</h5>
-                                    <div className="text-block-15">ipv € 19.234</div>
+                                    <h5 className="heading-4 detail-heading-4">€ {useFormatprice(vehicle.sell_price)}</h5>
+                                    <div className="text-block-15">&nbsp;
+                                        {/* ipv € 19.234 */}
+                                    </div>
                                 </div>
                                 <div>
                                     <div className="div-block-50"><a href="#" className="btn-default">MAAK EEN AFSPRAAK</a></div>
                                     <div className="div-block-51">
                                         <div className="text-block-16">U vindt deze wagen bij</div>
                                         <h4 className="heading-7">Ginion Used Cars</h4>
-                                        <div className="text-block-17">Chaussée de Bruxelles 56<br />1410 Waterloo<br /><br />Téléphone: <a href="tel:023520330" className="link-2">02 352 03 30</a><br />E-mail: <a href="mailto:info@ginionwaterloo.net.bmw.be" className="link-2">info@ginionwaterloo.net.bmw.be</a></div>
+                                        <div className="text-block-17">Chaussée de Bruxelles 56<br />1410 Waterloo<br /><br />Téléphone: <a href="tel:+32(0)23520379" className="link-2">+32 (0)2 352 03 79</a><br />E-mail: <a href="mailto:info@ginionusedcars.com" className="link-2">info@ginionusedcars.com</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -44,7 +47,7 @@ const OnsAanbodDetail = ({ vehicle }) => (<>
             </div>
         </div>
     </div>
-    <Warranties />
+    <Warranties lan={language} />
 
     <div className="company-map">
         <div className="div-block-12">
@@ -55,7 +58,8 @@ const OnsAanbodDetail = ({ vehicle }) => (<>
 
 const mapStateToProps = (state, props) => {
     return {
-        vehicle: state.vehicles.find(vehicle => vehicle.id === props.match.params.id)
+        vehicle: state.vehicles.find(vehicle => vehicle.id === props.match.params.id),
+        language: state.language
     }
 };
 

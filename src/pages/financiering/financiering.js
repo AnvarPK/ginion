@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import FindVehicle from '../../components/find-vehicle';
 import GoogleMap from '../../components/google-map';
-
+import Formm from '../../components/form';
 const Nl = () => (
     <>
         <p>Meer en meer klanten financieren een auto bij ons omdat de intrestrate zeer schappelijk is op de
@@ -13,8 +13,7 @@ financieringsformules aan, aangepast aan uw situatie en tegen de beste voorwaard
 met ons team voor een persoonlijk financieringsaanbod.</p>
         <p>Vraag hier uw simulatie aan, onze verkopers nemen zo snel mogelijk contact op met u.</p>
         <p>* Let op, geld lenen kost ook geld.</p>
-        <p>Kunnen we een knop toevoegen om een simulatie te kunnen aanvragen ?</p>
-        <p>Mail moet hier terecht: <a href="mailto:info@ginionusedcars.com" >info@ginionusedcars.com</a></p>
+
     </>
 )
 
@@ -33,13 +32,19 @@ dès maintenant contact avec notre équipe afin d’obtenir une offre de finance
     </>
 )
 
+
+const fn = {
+    nl: "FINANCIERING", fr: "Financement"
+}
+
+
 const Financiering = (props) => {
     return (
         <>
             <div className="text-banner">
                 <div className="container-ginion">
                     <div className="div-block-30">
-                        <h1 className="heading-3">FINANCIERING</h1>
+                        <h1 className="heading-3">{fn[props.language.value]}</h1>
                     </div>
                 </div>
             </div>
@@ -52,7 +57,9 @@ const Financiering = (props) => {
                                     <div className="div-block-34">
                                         {props.language.value === 'nl' && <Nl />}
                                         {props.language.value === 'fr' && <Fr />}
-                                        
+
+                                        <Formm />
+
                                     </div>
                                 </div>
                             </div>

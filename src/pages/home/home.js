@@ -68,7 +68,10 @@ const Home = ({ makes, models, language, mostViewed }) => {
             }
         }),
     }
-
+    const zok = {
+        nl: "Zoek uw voertuig",
+        fr: "Chercher votre voiture"
+    }
 
     return (
         <>
@@ -79,11 +82,11 @@ const Home = ({ makes, models, language, mostViewed }) => {
                             <h1 className="heading">DE BESTE TWEEDEHANDS WAGENS</h1>
                         </div>
                         <div className="div-block-42">
-                            <h3 className="heading-5">Zoek uw voertuig</h3>
+                            <h3 className="heading-5">{zok[language.value]}</h3>
                             <div>
                                 <div className="w-form">
                                     <div className="div-block-43">
-                                        <div className="div-block-44"><label htmlFor="name" className="field-label-2">MERK</label>
+                                        <div className="div-block-44"><label htmlFor="name" className="field-label-2">{language.value === "nl" ? "MERK" : "Marque"}</label>
                                             <DropDownSelect
                                                 placeholder="Kies uw merk"
                                                 options={makes} tag="make"
@@ -93,7 +96,7 @@ const Home = ({ makes, models, language, mostViewed }) => {
 
                                             />
                                         </div>
-                                        <div className="div-block-44"><label htmlFor="name-2" className="field-label-2">MODEL</label>
+                                        <div className="div-block-44"><label htmlFor="name-2" className="field-label-2">{language.value === "nl" ? "MODEL" : "Modèle"}</label>
                                             <DropDownSelect
                                                 placeholder="Kies uw model"
                                                 options={models} tag="model"
@@ -112,7 +115,7 @@ const Home = ({ makes, models, language, mostViewed }) => {
 
             <MostViwed data={mostViewed} lan={language} />
 
-            <Warranties />
+            <Warranties lan={language} />
 
             <div className="company-map">
                 <div className="div-block-12">

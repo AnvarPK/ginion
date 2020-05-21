@@ -9,7 +9,7 @@ function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
 
-const FilterBox = ({ makes, models, fuel_types, gears, first_regs, handleDropDownChange }) => {
+const FilterBox = ({ language, makes, models, fuel_types, gears, first_regs, handleDropDownChange }) => {
     let query = useQuery();
 
 
@@ -21,7 +21,7 @@ const FilterBox = ({ makes, models, fuel_types, gears, first_regs, handleDropDow
                 </div>
                 <div className="div-block-28">
                     <div className="div-block-29">
-                        <div className="text-block-5">MERK</div>
+                        <div className="text-block-5">{language.value === "nl" ? "MERK" : "Marque"}</div>
                         <DropDownSelect options={makes}
                             tag="make"
                             clearable={true}
@@ -30,7 +30,7 @@ const FilterBox = ({ makes, models, fuel_types, gears, first_regs, handleDropDow
                         />
                     </div>
                     <div className="div-block-29">
-                        <div className="text-block-5">MODEL</div>
+                        <div className="text-block-5">{language.value === "nl" ? "MODEL" : "Modèle"}</div>
                         <DropDownSelect options={models}
                             tag="model"
                             hChange={handleDropDownChange} clearable={true}

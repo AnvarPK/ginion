@@ -20,7 +20,7 @@ function useQuery() {
 
 
 const OnsAanbod = (props) => {
-    const { dispatch } = props;
+    const { dispatch, language } = props;
     let query = useQuery();
     useEffect(() => {
 
@@ -88,7 +88,7 @@ const OnsAanbod = (props) => {
                     </div>
                 </div>
             </div>
-            <Warranties />
+            <Warranties lan={language} />
 
             <div className="company-map">
                 <div className="div-block-12">

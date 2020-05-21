@@ -365,7 +365,7 @@ p {
 }
 
 .div-block-13.has-bg {
-  background-image: url('../images/image-9.png');
+  background-image: url('../images/image-9.jpg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1277,17 +1277,21 @@ p {
     font-size: 17px;
     line-height: 22px;
   }
+
   .div-block {
     margin-right: -15px;
   }
+
   .nav-link-2 {
     padding-right: 30px;
     padding-left: 30px;
   }
+
   .nav-menu {
     background-color: #fff;
     box-shadow: 0 4px 7px -4px rgba(0, 0, 0, 0.8);
   }
+
   .div-block-2 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1297,26 +1301,33 @@ p {
     padding-bottom: 15px;
     padding-left: 30px;
   }
+
   .div-block-2.footer-social-links {
     padding-bottom: 0px;
     padding-left: 0px;
   }
+
   .text-block {
     font-size: 14px;
     line-height: 15px;
   }
+
   .menu-button {
     padding: 15px;
   }
+
   .menu-button.w--open {
     background-color: #fff;
   }
+
   .icon-2 {
     color: #333;
   }
+
   .div-block-3 {
     display: none;
   }
+
   .div-block-5 {
     position: absolute;
     left: auto;
@@ -1325,10 +1336,12 @@ p {
     bottom: auto;
     display: block;
   }
+
   .heading {
     font-size: 40px;
     line-height: 50px;
   }
+
   .flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1336,6 +1349,7 @@ p {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .div-block-7 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1343,6 +1357,7 @@ p {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .div-block-8 {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1353,22 +1368,27 @@ p {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .div-block-9 {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
   .footer-top-btn {
     background-size: 150px, 150px;
   }
+
   .heading-2 {
     font-size: 29px;
     line-height: 37px;
   }
+
   .button {
     font-size: 17px;
     line-height: 21px;
     text-align: center;
   }
+
   .ginion-guranties {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1376,123 +1396,154 @@ p {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .div-block-13 {
     width: 100%;
   }
+
   .div-block-13.has-bg {
     min-height: 400px;
   }
+
   .h3 {
     padding-bottom: 20px;
     font-size: 25px;
     line-height: 33px;
   }
+
   .text-block-3 {
     font-size: 15px;
   }
+
   .home-car-blocks {
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
   .price {
     font-size: 22px;
     line-height: 27px;
   }
+
   .car-name {
     font-size: 20px;
     line-height: 25px;
   }
+
   .grid {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
+
   .div-block-23 {
     padding-top: 10px;
   }
+
   .banner-ons-aanbod {
     background-position: 115% 50%, -15% 50%;
   }
+
   .h1 {
     font-size: 40px;
     line-height: 50px;
   }
+
   .heading-3 {
     font-size: 45px;
     line-height: 55px;
   }
+
   .text-block-7 {
     font-size: 20px;
     line-height: 25px;
   }
+
   .text-block-8 {
     font-size: 16px;
     line-height: 24px;
   }
+
   .heading-4 {
     font-size: 20px;
     line-height: 25px;
   }
+
   .heading-4.detail-heading-4 {
     font-size: 30px;
     line-height: 38px;
   }
+
   .field-label {
     font-size: 16px;
     line-height: 17px;
   }
+
   .paragraph {
     font-size: 16px;
     line-height: 21px;
   }
+
   .text-block-9 {
     font-size: 20px;
     line-height: 25px;
   }
+
   .text-block-10 {
     font-size: 18px;
     line-height: 23px;
   }
+
   .text-block-11 {
     font-size: 18px;
     line-height: 23px;
   }
+
   .heading-5 {
     font-size: 20px;
     line-height: 25px;
   }
+
   .text-block-12 {
     font-size: 25px;
     line-height: 31px;
   }
+
   .heading-6.text-block-7 {
     font-size: 18px;
     line-height: 23px;
   }
+
   .text-block-13 {
     font-size: 18px;
     line-height: 26px;
   }
+
   .div-block-49 {
     padding-right: 10px;
   }
+
   .text-block-15 {
     font-size: 14px;
     line-height: 23px;
   }
+
   .btn-default {
     padding-top: 11px;
     padding-bottom: 11px;
     font-size: 16px;
     line-height: 22px;
   }
+
   .text-block-16 {
     font-size: 14px;
     line-height: 16px;
   }
+
   .heading-7 {
     font-size: 31px;
     line-height: 35px;
   }
+
   .text-block-17 {
     font-size: 18px;
     line-height: 20px;
@@ -1504,184 +1555,232 @@ p {
     font-size: 16px;
     line-height: 21px;
   }
+
   .brand {
     max-width: 75px;
   }
+
   .nav-link-2 {
     font-size: 14px;
     line-height: 17px;
   }
+
   .dropdown-toggle {
     padding-top: 5px;
     padding-right: 20px;
     padding-bottom: 5px;
   }
+
   .icon {
     top: 6px;
     right: 5px;
   }
+
   .div-block-5 {
     top: 22px;
     right: 80px;
   }
+
   .heading {
     font-size: 35px;
     line-height: 45px;
   }
+
   .footer {
     padding: 20px 20px 0px;
   }
+
   .div-block-9 {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
   .image-4 {
     max-width: 100px;
   }
+
   .footer-top-btn {
     background-image: none;
     background-position: 0px 0px;
     background-size: auto;
     background-repeat: repeat;
   }
+
   .heading-2 {
     font-size: 26px;
     line-height: 34px;
   }
+
   .button {
     font-size: 16px;
     line-height: 20px;
   }
+
   .company-map {
     padding: 20px;
   }
+
   .h3 {
     font-size: 23px;
     line-height: 30px;
   }
+
   .image-5 {
     width: 17px;
     margin-top: 13px;
   }
+
   .text-block-3 {
     font-size: 14px;
   }
+
   .div-block-17 {
     padding-left: 10px;
   }
+
   .home-car-blocks {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
   .price {
     font-size: 21px;
     line-height: 26px;
   }
+
   .car-name {
     font-size: 19px;
     line-height: 24px;
   }
+
   .div-block-23 {
     padding-top: 5px;
   }
+
   .banner-ons-aanbod {
     background-image: none;
     background-position: 0px 0px;
     background-size: auto;
     background-repeat: repeat;
   }
+
   .h1 {
     font-size: 36px;
     line-height: 46px;
   }
+
   .heading-3 {
     font-size: 38px;
     line-height: 48px;
   }
+
   .div-block-30 {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
   .div-block-31 {
     padding-top: 30px;
   }
+
   .text-block-7 {
     padding-bottom: 14px;
     font-size: 18px;
     line-height: 23px;
   }
+
   .image-8 {
     width: 15px;
     margin-top: 14px;
   }
+
   .text-block-8 {
     font-size: 15px;
     line-height: 23px;
   }
+
   .div-block-33 {
     padding-left: 10px;
   }
+
   .div-block-34 {
     padding-bottom: 40px;
   }
+
   .heading-4 {
     font-size: 19px;
     line-height: 24px;
   }
+
   .heading-4.detail-heading-4 {
     font-size: 27px;
     line-height: 35px;
   }
+
   .field-label {
     font-size: 15px;
     line-height: 16px;
   }
+
   .div-block-36 {
     position: static;
   }
+
   .div-block-37 {
     padding-bottom: 20px;
   }
+
   .submit-button {
     font-size: 13px;
     line-height: 17px;
   }
+
   .paragraph {
     font-size: 15px;
   }
+
   .column {
     padding-right: 0px;
     padding-left: 0px;
   }
+
   .section {
     padding-bottom: 40px;
   }
+
   .column-3 {
     padding-right: 0px;
   }
+
   .div-block-39 {
     padding-bottom: 30px;
   }
+
   .text-block-9 {
     padding-bottom: 8px;
     font-size: 19px;
     line-height: 24px;
   }
+
   .text-block-10 {
     font-size: 17px;
     line-height: 22px;
   }
+
   .text-block-11 {
     font-size: 17px;
     line-height: 22px;
   }
+
   .section-2 {
     padding-bottom: 50px;
   }
+
   .heading-5 {
     font-size: 19px;
     line-height: 24px;
   }
+
   .div-block-43 {
     max-width: 300px;
     margin-right: auto;
@@ -1692,40 +1791,50 @@ p {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+
   .div-block-44 {
     padding-right: 0px;
     padding-bottom: 20px;
   }
+
   .text-block-12 {
     font-size: 23px;
     line-height: 28px;
   }
+
   .text-block-13 {
     font-size: 17px;
   }
+
   .text-block-13.text-black {
     font-size: 17px;
     line-height: 25px;
   }
+
   .list-item {
     width: 100%;
   }
+
   .text-block-15 {
     font-size: 13px;
     line-height: 22px;
   }
+
   .btn-default {
     font-size: 15px;
     line-height: 21px;
   }
+
   .text-block-16 {
     font-size: 13px;
     line-height: 15px;
   }
+
   .heading-7 {
     font-size: 28px;
     line-height: 31px;
   }
+
   .text-block-17 {
     font-size: 17px;
     line-height: 19px;
@@ -1737,184 +1846,230 @@ p {
     font-size: 15px;
     line-height: 20px;
   }
+
   .brand {
     max-width: 80px;
   }
+
   .div-block-4 {
     padding-bottom: 15px;
   }
+
   .div-block-6 {
     padding-bottom: 150px;
   }
+
   .heading {
     font-size: 33px;
     line-height: 43px;
   }
+
   .footer {
     padding-top: 20px;
     padding-right: 20px;
     padding-left: 20px;
   }
+
   .heading-2 {
     font-size: 25px;
     line-height: 32px;
   }
+
   .button {
     font-size: 15px;
     line-height: 19px;
   }
+
   .h3 {
     font-size: 20px;
     line-height: 17px;
   }
+
   .div-block-15 {
     padding-bottom: 5px;
   }
+
   .div-block-17 {
     display: block;
   }
+
   .home-car-blocks {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
   .price {
     font-size: 20px;
     line-height: 25px;
   }
+
   .car-name {
     font-size: 18px;
     line-height: 23px;
   }
+
   .grid {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+
   .h1 {
     font-size: 28px;
     line-height: 42px;
   }
+
   .div-block-25 {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
   .heading-3 {
     font-size: 34px;
     line-height: 40px;
   }
+
   .div-block-30 {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
   .text-block-7 {
     padding-bottom: 10px;
   }
+
   .text-block-8 {
     width: 100%;
     font-size: 14px;
     line-height: 22px;
   }
+
   .div-block-33 {
     width: 100%;
   }
+
   .div-block-34 {
     padding-bottom: 20px;
   }
+
   .div-block-35 {
     padding: 15px 20px;
   }
+
   .heading-4 {
     font-size: 18px;
     line-height: 23px;
   }
+
   .heading-4.detail-heading-4 {
     font-size: 25px;
     line-height: 33px;
   }
+
   .form-block {
     padding-right: 20px;
     padding-left: 20px;
   }
+
   .field-label {
     font-size: 14px;
     line-height: 15px;
   }
+
   .text-field {
     font-size: 14px;
     line-height: 18px;
   }
+
   .submit-button {
     font-size: 12px;
     line-height: 16px;
   }
+
   .paragraph {
     font-size: 14px;
     line-height: 20px;
   }
+
   .text-block-9 {
     padding-bottom: 5px;
     font-size: 18px;
     line-height: 23px;
   }
+
   .text-block-10 {
     font-size: 16px;
     line-height: 21px;
   }
+
   .text-block-11 {
     font-size: 16px;
     line-height: 21px;
   }
+
   .section-2 {
     padding-bottom: 40px;
   }
+
   .heading-5 {
     font-size: 18px;
     line-height: 23px;
   }
+
   .text-block-12 {
     font-size: 16px;
     line-height: 22px;
     white-space: normal;
   }
+
   .detail-body {
     padding-bottom: 100px;
   }
+
   .text-block-13 {
     font-size: 16px;
   }
+
   .text-block-13.text-black {
     font-size: 16px;
     line-height: 24px;
   }
+
   .div-block-45 {
     width: 100%;
   }
+
   .div-block-46 {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
+
   .div-block-47 {
     padding-bottom: 40px;
   }
+
   .text-block-15 {
     font-size: 12px;
     line-height: 21px;
   }
+
   .btn-default {
     font-size: 14px;
     line-height: 20px;
   }
+
   .text-block-16 {
     font-size: 12px;
     line-height: 14px;
   }
+
   .heading-7 {
     font-size: 25px;
     line-height: 28px;
   }
+
   .text-block-17 {
     font-size: 16px;
     line-height: 17px;
   }
 }
-

@@ -1,9 +1,11 @@
 // Vehicle Reducer
-
+const url = window.location.pathname;
+const lan = url.includes('/nl');
 const languageDefaultState = {
-    value: 'nl',
-    label: 'NL'
+    value: lan ? 'nl' : 'fr',
+    label: lan ? 'NL' : 'FR'
 };
+
 
 
 export default (state = languageDefaultState, action) => {
