@@ -1,6 +1,5 @@
 // Vehicle Reducer
 const url = window.location.pathname;
-console.log(url);
 const lan = url === "/" ? true : url.includes('/nl');
 const languageDefaultState = {
     value: lan ? 'nl' : 'fr',

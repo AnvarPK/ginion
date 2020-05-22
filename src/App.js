@@ -36,7 +36,7 @@ function App() {
 
 
   return (
-    <Router >
+    <Router basename='/ginion'>
       {/* basename='/ginion' */}
       <ScrollToTop />
       <Header />
