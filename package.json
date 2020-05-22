@@ -34,7 +34,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "http://codeandhue.com/ginion",
+  "homepage": "http://codeandhue.com",
   "browserslist": {
     "production": [
       ">0.2%",
