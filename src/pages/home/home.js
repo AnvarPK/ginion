@@ -79,7 +79,7 @@ const Home = ({ makes, models, language, mostViewed }) => {
                 <div className="container-ginion">
                     <div className="div-block-6">
                         <div className="div-block-41">
-                            <h1 className="heading">DE BESTE TWEEDEHANDS WAGENS</h1>
+                            <h1 className="heading">{language.value === "nl" ? "DE BESTE TWEEDEHANDS WAGENS" : "Les meilleurs véhicules d’occasion"}</h1>
                         </div>
                         <div className="div-block-42">
                             <h3 className="heading-5">{zok[language.value]}</h3>
@@ -88,7 +88,7 @@ const Home = ({ makes, models, language, mostViewed }) => {
                                     <div className="div-block-43">
                                         <div className="div-block-44"><label htmlFor="name" className="field-label-2">{language.value === "nl" ? "MERK" : "Marque"}</label>
                                             <DropDownSelect
-                                                placeholder="Kies uw merk"
+                                                placeholder={language.value === "nl" ? "Kies uw merk" : "Choisissez votre marque"}
                                                 options={makes} tag="make"
                                                 hChange={handleDropdownChange}
                                                 className="text-field-2 w-input"
@@ -98,7 +98,7 @@ const Home = ({ makes, models, language, mostViewed }) => {
                                         </div>
                                         <div className="div-block-44"><label htmlFor="name-2" className="field-label-2">{language.value === "nl" ? "MODEL" : "Modèle"}</label>
                                             <DropDownSelect
-                                                placeholder="Kies uw model"
+                                                placeholder={language.value === "nl" ? "Kies uw model" : "Choisissez votre modèle"}
                                                 options={models} tag="model"
                                                 hChange={handleDropdownChange}
                                                 cs={customStyles}

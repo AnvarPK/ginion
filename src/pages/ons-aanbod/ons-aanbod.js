@@ -63,7 +63,9 @@ const OnsAanbod = (props) => {
             <div className="banner-ons-aanbod">
                 <div className="div-block-24">
                     <div className="div-block-25">
-                        <h1 className="h1">Ontdek hier ons ruime aanbod  tweedehands wagens</h1>
+                        <h1 className="h1">
+                            {language.value === "nl" ? "Ontdek hier ons ruime aanbod  tweedehands wagens" : "Découvrez notre large gamme de voitures d’occasion ici"}
+                        </h1>
                     </div>
                 </div>
             </div>

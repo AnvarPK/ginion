@@ -24,7 +24,7 @@ const VehicleBox = ({ data, lan }) => {
                 </div>
                 <div className="div-block-21">
                     <div className="price">€ {useFormatprice(sell_price)}</div>
-                    <div className="more-btn">BEKIJK DETAILS</div>
+                    <div className="more-btn">{lan.value === "nl" ? "BEKIJK DETAILS" : "Voir détails"}</div>
                 </div>
             </div>
         </div>

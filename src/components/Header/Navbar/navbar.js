@@ -7,22 +7,8 @@ import FB from './facebook.svg'
 import Insta from './Instagram.svg';
 import 'react-dropdown/style.css';
 import './style.css';
+import { h, con, fn, gr, ons, ov } from '../../navItems';
 
-const ons = {
-    nl: "ons aanbod", fr: "Notre assortiment"
-}
-const gr = {
-    nl: "Garanties & Diensten", fr: "Garanties & services"
-}
-const fn = {
-    nl: "FINANCIERING", fr: "Financement"
-}
-const ov = {
-    nl: "OVER ONS", fr: "A propos de nous"
-}
-const con = {
-    nl: "Contact", fr: "Contact"
-}
 const Navbar = ({ options, language, onChange }) => (
 
     <nav role="navigation" className="nav-menu w-nav-menu">
@@ -32,7 +18,7 @@ const Navbar = ({ options, language, onChange }) => (
                 className="nav-link-2 w-nav-link "
                 exact={true}
 
-            >Home</NavLink>
+            >{h[language.value]}</NavLink>
             <NavLink to={`/${language.value}/ons-aanbod`} activeClassName="w--current" className="nav-link-2 w-nav-link">{ons[language.value]}</NavLink >
             <NavLink to={`/${language.value}/garanties-diensten`} activeClassName="w--current" className="nav-link-2 w-nav-link">{gr[language.value]}</NavLink>
             <NavLink to={`/${language.value}/financiering`} activeClassName="w--current" className="nav-link-2 w-nav-link">{fn[language.value]}</NavLink>

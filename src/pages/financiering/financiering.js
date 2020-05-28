@@ -26,9 +26,9 @@ différentes formules de financement adaptées à votre situation et aux meilleu
         <p>Que vous optiez pour un emprunt à remboursement mensuel ou pour un leasing financier, prenez
 dès maintenant contact avec notre équipe afin d’obtenir une offre de financement personnalisée.</p>
         <p>*Attention, emprunter de l’argent coûte aussi de l’argent.</p>
-        <p>Kunnen we een knop toevoegen om een simulatie te kunnen aanvragen?
+        {/* <p>Kunnen we een knop toevoegen om een simulatie te kunnen aanvragen?
         </p>
-        <p>Mail moet hier terecht: <a href="mailto:info@ginionusedcars.com" >info@ginionusedcars.com</a></p>
+        <p>Mail moet hier terecht: <a href="mailto:info@ginionusedcars.com" >info@ginionusedcars.com</a></p> */}
     </>
 )
 

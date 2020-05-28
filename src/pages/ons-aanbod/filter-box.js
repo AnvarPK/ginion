@@ -14,10 +14,12 @@ const FilterBox = ({ language, makes, models, fuel_types, gears, first_regs, han
 
 
     return (
-        <div className="w-col w-col-3">
+        <div className="w-col w-col-3 " style={{ marginBottom: "25px" }}>
             <div className="div-block-27">
                 <div className="div-block-26">
-                    <div className="text-block-4">VERFIJN DE RESULTATEN</div>
+                    <div className="text-block-4">
+                        {language.value === "nl" ? "VERFIJN DE RESULTATEN" : "Affiner les résultats"}
+                    </div>
                 </div>
                 <div className="div-block-28">
                     <div className="div-block-29">
