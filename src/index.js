@@ -28,7 +28,7 @@ store.dispatch(startSetVehicles()).then(() => {
     document.getElementById('root')
   );
 })
-
+// "homepage": "http://codeandhue.com/ginion",
 
 
 // If you want your app to work offline and load faster, you can change
