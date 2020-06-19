@@ -60,6 +60,10 @@ const OnsAanbod = (props) => {
         }
     }
 
+    const handleRangeChnage = (newValue, props) => {
+        return dispatch(setMileage(newValue));
+    }
+
     return (
         <>
             <div className="banner-ons-aanbod">
@@ -78,6 +82,7 @@ const OnsAanbod = (props) => {
                             <FilterBox
                                 {...props}
                                 handleDropDownChange={handleDropdownChange}
+                                handleRangeChnage={handleRangeChnage}
                             />
                             <div className="w-col w-col-9">
                                 <div className="w-layout-grid grid-2">
@@ -104,7 +109,6 @@ const OnsAanbod = (props) => {
 }
 
 const mapStateToProps = (state) => {
-
     return {
         vehicles: getVisibleVehicles(state.vehicles, state.filters),
         makes: getMakes(state.vehicles),

@@ -1,5 +1,14 @@
 import React from 'react';
 import DropDownSelect from '../../components/drop-down-select';
+import {
+    Slider,
+    SliderInput,
+    SliderTrack,
+    SliderTrackHighlight,
+    SliderHandle,
+    SliderMarker,
+} from "@reach/slider";
+import "@reach/slider/styles.css";
 
 import {
     useLocation
@@ -9,9 +18,9 @@ function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
 
-const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_regs, handleDropDownChange }) => {
+const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_regs, handleDropDownChange, handleRangeChnage }) => {
     let query = useQuery();
-
+    const maxMilage = mileage.reduce((max, item) => max >= item.value ? max : item.value, mileage[0].value);
 
     return (
         <div className="w-col w-col-3 " style={{ marginBottom: "25px" }}>
@@ -58,10 +67,18 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
                     </div>
                     <div className="div-block-29">
                         <div className="text-block-5">{language.value === "nl" ? "KILOMETERSTAND" : "Kilométrage"}</div>
-                        <DropDownSelect options={mileage}
+                        {/* <DropDownSelect options={mileage}
                             tag="mileage"
                             placeholder={language.value === "nl" ? "Select..." : 'Selectionner...'}
-                            hChange={handleDropDownChange} clearable={true} />
+                            hChange={handleDropDownChange} clearable={true} /> */}
+                        <div className='slider-wrap'>
+                            <Slider min={0} max={maxMilage} step={10}
+                                defaultValue={maxMilage}
+                                onChange={handleRangeChnage}
+                            />
+                            <div className="range-s range-s-max">{maxMilage}</div>
+                        </div>
+
                     </div>
                     <div className="div-block-29">
                         <div className="text-block-5">{language.value === "nl" ? "EERSTE inschrijving" : "Première immatriculation"}</div>

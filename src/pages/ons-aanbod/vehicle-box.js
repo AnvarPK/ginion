@@ -9,7 +9,7 @@ import {
 
 
 const VehicleBox = ({ data, lan }) => {
-    const { id, version, make, model, sell_price, img } = data;
+    const { id, version, make, model, sell_price, img, mileage } = data;
     const url = `/${lan.value}/ons-aanbod/${id}`;
 
     return (<Link to={url} className="link-block-2 w-inline-block">

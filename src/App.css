@@ -79,6 +79,36 @@ p a {
     min-height: calc(100vh - 512px);
 }
 
+
+[data-reach-slider-input][data-orientation="horizontal"] {
+    width: 100% !important;
+    outline: none !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+[data-reach-slider-input][data-orientation="horizontal"] * {
+    outline: none !important;
+}
+
+.slider-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.range-s {
+    font-size: 12px;
+}
+
+.range-s.range-s-min {
+    margin-right: 5px;
+}
+
+.range-s.range-s-max {
+    margin-left: 10px;
+}
+
 @media (max-width: 991px) {
     .contet-sec {
         min-height: calc(100vh - 787px);
