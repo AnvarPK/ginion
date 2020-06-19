@@ -26,7 +26,7 @@ const OverOns = ({ language }) => {
             <div className="text-banner">
                 <div className="container-ginion">
                     <div className="div-block-30">
-                        <h1 className="heading-3">WELKOM BIJ GINION</h1>
+                        <h1 className="heading-3"> {language.value === 'nl' ? "WELKOM BIJ GINION" : "Bienvenue chez nous"}</h1>
                     </div>
                 </div>
             </div>

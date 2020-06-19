@@ -17,6 +17,8 @@ export const getMakes = (vehicles) => getData(vehicles, 'make');
 
 export const getModels = (vehicles) => getData(vehicles, 'model');
 
+export const getMileage = (vehicles) => getData(vehicles, 'mileage');
+
 export const getFuelTypes = (vehicles) => getData(vehicles, 'fuel_type');
 
 export const getGears = (vehicles) => getData(vehicles, 'gears');

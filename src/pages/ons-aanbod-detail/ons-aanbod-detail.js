@@ -18,8 +18,8 @@ const OnsAanbodDetail = ({ vehicle, language }) => (<>
                         <div className="div-block-52">
                             <CarDetailSlider veh={vehicle} />
                             <div>
-                                <Characteristics veh={vehicle} />
-                                <Equipment options={vehicle.equipment_options} />
+                                <Characteristics veh={vehicle} lan={language.value} />
+                                <Equipment options={vehicle.equipment_options} lan={language.value} />
                             </div>
                         </div>
                     </div>
@@ -33,11 +33,11 @@ const OnsAanbodDetail = ({ vehicle, language }) => (<>
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="div-block-50"><a href="#" className="btn-default">MAAK EEN AFSPRAAK</a></div>
+                                    <div className="div-block-50"><a href="#" className="btn-default">{language.value == "nl" ? "MAAK EEN AFSPRAAK" : "Prenez un rendez-vous"}</a></div>
                                     <div className="div-block-51">
-                                        <div className="text-block-16">U vindt deze wagen bij</div>
+                                        <div className="text-block-16">{language.value == "nl" ? "U vindt deze wagen bij" : "Cette voiture se trouve chez"}</div>
                                         <h4 className="heading-7">Ginion Used Cars</h4>
-                                        <div className="text-block-17">Chaussée de Bruxelles 56<br />1410 Waterloo<br /><br />Téléphone: <a href="tel:+32(0)23520379" className="link-2">+32 (0)2 352 03 79</a><br />E-mail: <a href="mailto:info@ginionusedcars.com" className="link-2">info@ginionusedcars.com</a></div>
+                                        <div className="text-block-17">Chaussée de Bruxelles 56<br />1410 Waterloo<br /><br />{language.value == "nl" ? "Telefoon:" : "Téléphone:"} <a href="tel:+32(0)23520379" className="link-2">+32 (0)2 352 03 79</a><br />E-mail: <a href="mailto:info@ginionusedcars.com" className="link-2">info@ginionusedcars.com</a></div>
                                     </div>
                                 </div>
                             </div>

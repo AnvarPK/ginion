@@ -16,7 +16,7 @@ const Footer = ({ language }) => {
                     <div className="container-ginion">
                         <div className="div-block-11">
                             <h2 className="heading-2">{language.value === "nl" ? "Nog niet zeker welk model je wilt?" : "Pas encore certain du modèle que vous souhaitez ?"}</h2><a href="#" className="button w-button">
-                                {language.value === "nl" ? "BEKIJK ONS ELE AANBOD" : "Découvrez toute notre gramme"}</a>
+                                {language.value === "nl" ? "BEKIJK ONS HELE AANBOD" : "Découvrez toute notre gramme"}</a>
                         </div>
                     </div>
                 </div>

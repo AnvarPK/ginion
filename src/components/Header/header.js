@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useRef,useState,useEffect} from 'react';
 import { connect } from 'react-redux';
 import { setLanguage } from '../../redux/actions/language';
 import Dropdown from 'react-dropdown';
@@ -11,6 +11,14 @@ import {
 
 const Header = ({ history, dispatch, language }) => {
     let { pathname, search } = useLocation();
+    // const [navOpen, setNavOpen]=useState(false);
+    const [navOpen, setNavOpen]=useState('w-nav-overlay');
+    let mobNavContainer = useRef(null);
+
+    useEffect(()=>{
+        const nvContainer= mobNavContainer.current;
+        nvContainer.style.height = `${document.body.clientHeight}px`;
+    },[navOpen])
 
     const languageOptions = [
         { value: 'nl', label: 'NL' },
@@ -23,6 +31,18 @@ const Header = ({ history, dispatch, language }) => {
         dispatch(setLanguage({ ...v }));
         const newPath = `${pathname.replace(second, v.value)}${search}`;
         history.push(newPath)
+    }
+
+    const navButtonClick = () =>{
+        navOpen==="w-nav-overlay"?setNavOpen('w-nav-overlay w-nav-overlay--open'):setNavOpen('w-nav-overlay');
+
+        
+    }
+
+    const overlayClick = (e) =>{
+        if(e.target.className===navOpen){
+            navButtonClick();
+        }
     }
 
     return (
@@ -39,7 +59,7 @@ const Header = ({ history, dispatch, language }) => {
                         defaultOption={language}
                     />
 
-                    <div className="menu-button w-nav-button">
+                    <div className="menu-button w-nav-button" onClick={navButtonClick}>
                         <div className="icon-2 w-icon-nav-menu"></div>
                     </div>
 
@@ -51,7 +71,14 @@ const Header = ({ history, dispatch, language }) => {
                     </div>
                 </div>
             </div>
-
+            <div className={navOpen} ref={mobNavContainer} data-wf-ignore=""  onClick={overlayClick} >
+            <Navbar
+                        language={language}
+                        options={languageOptions}
+                        onChange={_onSelect}
+                        defaultOption={language}
+                    />
+            </div>
         </div>
     );
 }

@@ -80,7 +80,7 @@ const FindVehicle = ({ makes, models, language }) => {
                 <div className="form-block w-form">
                     <div className="div-block-37" style={{ paddingBottom: 15 }}><label className="field-label">{language.value === "nl" ? "MERK" : "Marque"}</label>
                         <DropDownSelect
-                            placeholder="Kies uw merk"
+                            placeholder={language.value === "nl" ? "Kies uw merk" : 'Choisissez votre marque'}
                             options={makes} tag="make"
                             hChange={handleDropdownChange}
                             className="text-field-2 w-input"
@@ -90,7 +90,7 @@ const FindVehicle = ({ makes, models, language }) => {
                     </div>
                     <div className="div-block-37" style={{ paddingBottom: 15 }}><label className="field-label">{language.value === "nl" ? "MODEL" : "Modèle"}</label>
                         <DropDownSelect
-                            placeholder="Kies uw model"
+                            placeholder={language.value === "nl" ? "Kies uw model" : 'Choisissez votre modèle'}
                             options={models} tag="model"
                             hChange={handleDropdownChange}
                             cs={customStyles}

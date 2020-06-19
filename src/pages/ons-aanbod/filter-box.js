@@ -9,7 +9,7 @@ function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
 
-const FilterBox = ({ language, makes, models, fuel_types, gears, first_regs, handleDropDownChange }) => {
+const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_regs, handleDropDownChange }) => {
     let query = useQuery();
 
 
@@ -28,6 +28,7 @@ const FilterBox = ({ language, makes, models, fuel_types, gears, first_regs, han
                             tag="make"
                             clearable={true}
                             hChange={handleDropDownChange}
+                            placeholder={language.value === "nl" ? "Select..." : 'Selectionner...'}
                             setVal={query.get("make") ? { value: query.get("make"), label: query.get("make") } : 'null'}
                         />
                     </div>
@@ -36,34 +37,37 @@ const FilterBox = ({ language, makes, models, fuel_types, gears, first_regs, han
                         <DropDownSelect options={models}
                             tag="model"
                             hChange={handleDropDownChange} clearable={true}
+                            placeholder={language.value === "nl" ? "Select..." : 'Selectionner...'}
                             setVal={query.get("model") ? { value: query.get("model"), label: query.get("model") } : 'null'}
                         />
                     </div>
                     <div className="div-block-29">
-                        <div className="text-block-5">Brandstof</div>
+                        <div className="text-block-5">{language.value === "nl" ? "Brandstof" : "Carburant"}</div>
                         <DropDownSelect options={fuel_types}
                             tag="fuel_type"
+                            placeholder={language.value === "nl" ? "Select..." : 'Selectionner...'}
                             hChange={handleDropDownChange} clearable={true} />
                     </div>
                     <div className="div-block-29">
-                        <div className="text-block-5">VERSNELLINGSBAK</div>
+                        <div className="text-block-5">{language.value === "nl" ? "VERSNELLINGSBAK" : "Boite de vitesse"}</div>
                         <DropDownSelect options={gears}
                             tag="gears"
+                            placeholder={language.value === "nl" ? "Select..." : 'Selectionner...'}
                             hChange={handleDropDownChange} clearable={true} />
 
                     </div>
                     <div className="div-block-29">
-                        <div className="text-block-5">KILOMETERSTAND</div>
-                        <DropDownSelect options={fuel_types}
-                            tag="fuel_type"
-
+                        <div className="text-block-5">{language.value === "nl" ? "KILOMETERSTAND" : "Kilométrage"}</div>
+                        <DropDownSelect options={mileage}
+                            tag="mileage"
+                            placeholder={language.value === "nl" ? "Select..." : 'Selectionner...'}
                             hChange={handleDropDownChange} clearable={true} />
                     </div>
                     <div className="div-block-29">
-                        <div className="text-block-5">EERSTE inschrijving</div>
+                        <div className="text-block-5">{language.value === "nl" ? "EERSTE inschrijving" : "Première immatriculation"}</div>
                         <DropDownSelect options={first_regs}
                             tag="first_reg"
-                            hChange={handleDropDownChange} clearable={true} />
+                            hChange={handleDropDownChange} clearable={true} placeholder={language.value === "nl" ? "Select..." : 'Selectionner...'} />
                     </div>
                 </div>
             </div>

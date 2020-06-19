@@ -58,7 +58,7 @@ const Financiering = (props) => {
                                         {props.language.value === 'nl' && <Nl />}
                                         {props.language.value === 'fr' && <Fr />}
 
-                                        <Formm />
+                                        <Formm lan={props.language.value} />
 
                                     </div>
                                 </div>

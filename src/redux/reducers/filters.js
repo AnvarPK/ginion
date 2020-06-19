@@ -3,6 +3,7 @@
 const filtersReducerDefaultState = {
     make: undefined,
     model: undefined,
+    mileage: undefined,
     fuel_type: undefined,
     gears: undefined,
     first_reg: undefined
@@ -19,6 +20,11 @@ export default (state = filtersReducerDefaultState, action) => {
             return {
                 ...state,
                 model: action.model
+            };
+        case 'SET_MILEAGE':
+            return {
+                ...state,
+                mileage: action.mileage
             };
         case 'SET_FUEL_TYPE':
             return {

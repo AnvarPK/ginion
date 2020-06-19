@@ -5,3 +5,45 @@
 .Dropdown-arrow {
    top: 18px;
 }
+
+@media screen and (max-width: 767px){
+   .Dropdown-control{
+      padding-top: 5px;
+      padding-right: 20px;
+      padding-bottom: 5px;
+   }
+   .Dropdown-arrow{
+      top: 12px;
+      right: 7px;
+   }
+}
+.w-nav-overlay{
+   
+   height: 0;
+   position: absolute;
+}
+.w-nav-overlay .nav-menu{
+   /* position: absolute; */
+   transform: translateY(-325px);
+   transition: transform .9s ease-in-out;
+   width: 100%;
+}
+@media screen and (max-width: 991px){
+   .w-nav-overlay--open {
+      display: block;
+      visibility: visible;
+     
+   }
+   .w-nav[data-collapse="medium"] .w-nav-overlay .nav-menu{
+      display: block;
+   }
+   .w-nav-overlay--open .nav-menu .w-nav-link{
+      display: block;
+
+   }
+   .w-nav[data-collapse="medium"] .w-nav-overlay--open .nav-menu{
+      display: block;
+      transform: translateY(0px);
+   }
+}
+

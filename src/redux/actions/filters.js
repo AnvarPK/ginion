@@ -24,6 +24,11 @@ export const setFirstReg = (first_reg) => ({
     first_reg
 });
 
+export const setMileage = (mileage) => ({
+    type: 'SET_MILEAGE',
+    mileage
+});
+
 export const setFilterEmpty = (first_reg) => ({
     type: 'SET_FILTER_EMPTY'
 });

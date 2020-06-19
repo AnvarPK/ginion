@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import getVisibleVehicles from '../../redux/selectors/vehicles';
-import { getMakes, getModels, getFuelTypes, getGears, getFirstRegs } from '../../redux/selectors/dropDownOptions';
-import { setMake, setModel, setFuelType, setGears, setFirstReg, setFilterEmpty } from '../../redux/actions/filters';
+import { getMakes, getMileage, getModels, getFuelTypes, getGears, getFirstRegs } from '../../redux/selectors/dropDownOptions';
+import { setMake, setModel, setMileage, setFuelType, setGears, setFirstReg, setFilterEmpty } from '../../redux/actions/filters';
 import GoogleMap from '../../components/google-map';
 import Warranties from '../../components/warranties';
 import FilterBox from './filter-box';
@@ -49,6 +49,8 @@ const OnsAanbod = (props) => {
                 return dispatch(setModel(v.value));
             case 'fuel_type':
                 return dispatch(setFuelType(v.value));
+            case 'mileage':
+                return dispatch(setMileage(v.value));
             case 'gears':
                 return dispatch(setGears(v.value));
             case 'first_reg':
@@ -107,6 +109,7 @@ const mapStateToProps = (state) => {
         vehicles: getVisibleVehicles(state.vehicles, state.filters),
         makes: getMakes(state.vehicles),
         models: getModels(state.vehicles),
+        mileage: getMileage(state.vehicles),
         fuel_types: getFuelTypes(state.vehicles),
         gears: getGears(state.vehicles),
         first_regs: getFirstRegs(state.vehicles),

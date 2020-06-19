@@ -6,8 +6,9 @@ import ProgressiveImage from "../../components/ProgressiveImage";
 
 import FindVehicle from '../../components/find-vehicle';
 import GoogleMap from '../../components/google-map';
+import { connect } from 'react-redux'
 
-const Contact = () => {
+const Contact = ({ lan }) => {
     return (
         <>
             <div className="text-banner">
@@ -32,12 +33,12 @@ const Contact = () => {
                                     </div>
                                     <div className="div-block-39">
                                         <div className="text-block-9">Contact</div>
-                                        <div className="text-block-10">Telefoon: <a href="tel:+32(0)23520379" className="link">+32 (0)2 352 03 79</a></div>
+                                        <div className="text-block-10">{lan.value === "nl" ? "Telefoon" : "Téléphone"} : <a href="tel:+32(0)23520379" className="link">+32 (0)2 352 03 79</a></div>
                                         <div className="text-block-10">E-mail: <a href="mailto:info@ginionusedcars.com" className="link">info@ginionusedcars.com</a></div>
                                     </div>
                                     <div className="div-block-39">
-                                        <div className="text-block-9">Openingsuren</div>
-                                        <div className="text-block-10">Ma - Vr. : 09:00 - 19:00<br />Za : 09:30 - 17:30</div>
+                                        <div className="text-block-9">{lan.value === "nl" ? "Openingsuren" : "Heures d’ouverture"}</div>
+                                        <div className="text-block-10">{lan.value === "nl" ? "Maandag - Vrijdag" : "Lundi - Vendredi"}. : 09:00 - 19:00<br />{lan.value === "nl" ? "Zaterdag" : "Samedi"} : 09:30 - 17:30</div>
                                     </div>
 
                                 </div>
@@ -58,4 +59,10 @@ const Contact = () => {
     );
 }
 
-export default Contact;
+const mapStateToProps = (state) => {
+    return {
+        lan: state.language
+    }
+};
+
+export default connect(mapStateToProps)(Contact);

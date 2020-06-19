@@ -91,11 +91,7 @@ const Fr = () => (
 
         <div className="div-block-34">
             <div className="text-block-7">GARANTIES</div>
-            <p>Tous nos véhicules vendus sous le label « Ginion Used Cars » bénéficient de 12
-            mois de garantie. Les voitures mises en vente sous le label ‘Ginion Used Cars’ ont
-            été minutieusement inspectées par nos spécialistes. Après des examens techniques et
-            optiques approfondis nous garantissons la vente de véhicules de qualité pour un plaisir de
-conduite optimal.</p>
+            <p>Toutes nos voitures d’occasion certifiées Ginion Used Cars bénéficie d’une garantie complète de 12 mois. Elles ont été minutieusement inspectées par nos techniciens spécialisés et expérimentés. Après des examens techniques et optiques approfondis nous garantissons la vente de véhicules de qualité pour un plaisir de conduite optimal.</p>
             {/* <ul className="list w-list-unstyled">
                 <li>
                     <div className="div-block-32"><img src={Vector} alt="" className="image-8" />
