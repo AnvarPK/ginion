@@ -5,6 +5,13 @@ const getData = (vehicles, tag) => {
         if (tag === "first_reg") return item[tag].split('-')[0];
         return item[tag];
     })
+    if (tag === "gears") {
+
+        items = [...items].map(item => {
+            return item.replace(/\d+/g, '')
+        })
+    }
+
     let filteredItems = items.filter(function (item, i, orig) {
         return orig.indexOf(item, i + 1) === -1;
     });
@@ -12,6 +19,7 @@ const getData = (vehicles, tag) => {
     if (tag === "first_reg") {
         filteredItems = filteredItems.sort();
     }
+
 
     const options = [...filteredItems].map(item => {
         return { value: item, label: item }
