@@ -109,6 +109,11 @@ p a {
     margin-left: 10px;
 }
 
+.css-2b097c-container {
+    z-index: 2;
+
+}
+
 @media (max-width: 991px) {
     .contet-sec {
         min-height: calc(100vh - 787px);
