@@ -22,6 +22,18 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
     let query = useQuery();
     const maxMilage = mileage.reduce((max, item) => max >= item.value ? max : item.value, mileage[0].value);
 
+
+
+    fuel_types = fuel_types.map(item => {
+        if (item.label === "GAS" && language.value === "nl") {
+            item.label = "BENZINE"
+        }
+        else if (item.label === "GAS" && language.value === "fr") {
+            item.label = "ESSENCE"
+        }
+        return item;
+    })
+
     return (
         <div className="w-col w-col-3 " style={{ marginBottom: "25px" }}>
             <div className="div-block-27">

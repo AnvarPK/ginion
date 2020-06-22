@@ -5,12 +5,20 @@ const getData = (vehicles, tag) => {
         if (tag === "first_reg") return item[tag].split('-')[0];
         return item[tag];
     })
-    const filteredItems = items.filter(function (item, i, orig) {
+    let filteredItems = items.filter(function (item, i, orig) {
         return orig.indexOf(item, i + 1) === -1;
     });
+
+    if (tag === "first_reg") {
+        filteredItems = filteredItems.sort();
+    }
+
     const options = [...filteredItems].map(item => {
         return { value: item, label: item }
     })
+
+
+
     return options;
 }
 export const getMakes = (vehicles) => getData(vehicles, 'make');
