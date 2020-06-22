@@ -8,7 +8,10 @@ const getData = (vehicles, tag) => {
     if (tag === "gears") {
 
         items = [...items].map(item => {
-            return item.replace(/\d+/g, '')
+            let it = item.replace(/\d+/g, '')
+
+            it = it === "ROBOT" ? "AUTO" : it === "AUTO" ? "AUTO" : "MANUAL";
+            return it;
         })
     }
 

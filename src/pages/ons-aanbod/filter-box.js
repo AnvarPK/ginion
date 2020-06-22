@@ -35,6 +35,11 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
         return item;
     })
 
+    gears = gears.map(item => {
+        if (item.label === 'AUTO') item.label = 'AUTOMATIC'
+        return item
+    })
+
     const rangeChnage = (newValue, props) => {
         setMilageVl(newValue);
         handleRangeChnage(newValue, props)

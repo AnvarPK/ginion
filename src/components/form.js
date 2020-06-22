@@ -10,23 +10,23 @@ const NlForm = () => (
                 <div className="form-block w-form">
                     <div className="div-block-37" >
                         <label className="field-label">Naam</label>
-                        <input name="first-name" />
+                        <input name="first-name" autoComplete="off" />
                     </div>
                     <div className="div-block-37" >
                         <label className="field-label">Achternaam</label>
-                        <input name="last-name" />
+                        <input name="last-name" autoComplete="off" />
                     </div>
                     <div className="div-block-37" >
                         <label className="field-label" >Email</label>
-                        <input name="email" type="email" />
+                        <input name="email" type="email" autoComplete="off" />
                     </div>
                     <div className="div-block-37" >
                         <label className="field-label" >TELEFOONNUMMER</label>
-                        <input name="phone" type="number" />
+                        <input name="phone" type="number" autoComplete="off" />
                     </div>
                     <div className="div-block-37" >
                         <label className="field-label" >Bedrag</label>
-                        <input name="amount" type="number" />
+                        <input name="amount" type="number" autoComplete="off" />
                     </div>
                     <div className="div-block-37" >
                         <button type="submit" >Simulatie aanvragen</button>
@@ -46,23 +46,23 @@ const FrForm = () => (
                 <div className="form-block w-form">
                     <div className="div-block-37" >
                         <label className="field-label">Nom</label>
-                        <input name="first-name" />
+                        <input name="first-name" autoComplete="off" />
                     </div>
                     <div className="div-block-37" >
                         <label className="field-label">Prénom</label>
-                        <input name="last-name" />
+                        <input name="last-name" autoComplete="off" />
                     </div>
                     <div className="div-block-37" >
                         <label className="field-label" >Email</label>
-                        <input name="email" type="email" />
+                        <input name="email" type="email" autoComplete="off" />
                     </div>
                     <div className="div-block-37" >
                         <label className="field-label" >Numéro de téléphone</label>
-                        <input name="phone" type="number" />
+                        <input name="phone" type="number" autoComplete="off" />
                     </div>
                     <div className="div-block-37" >
                         <label className="field-label" >Montant</label>
-                        <input name="amount" type="number" />
+                        <input name="amount" type="number" autoComplete="off" />
                     </div>
                     <div className="div-block-37" >
                         <button type="submit" >Demander une simulation</button>
