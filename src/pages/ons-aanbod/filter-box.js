@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import DropDownSelect from '../../components/drop-down-select';
 import {
     Slider,
@@ -21,6 +21,7 @@ function useQuery() {
 const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_regs, handleDropDownChange, handleRangeChnage }) => {
     let query = useQuery();
     const maxMilage = mileage.reduce((max, item) => max >= item.value ? max : item.value, mileage[0].value);
+    const [milageVl, setMilageVl] = useState(maxMilage);
 
 
 
@@ -34,6 +35,10 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
         return item;
     })
 
+    const rangeChnage = (newValue, props) => {
+        setMilageVl(newValue);
+        handleRangeChnage(newValue, props)
+    }
     return (
         <div className="w-col w-col-3 " style={{ marginBottom: "25px" }}>
             <div className="div-block-27">
@@ -86,9 +91,9 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
                         <div className='slider-wrap'>
                             <Slider min={0} max={maxMilage} step={10}
                                 defaultValue={maxMilage}
-                                onChange={handleRangeChnage}
+                                onChange={rangeChnage}
                             />
-                            <div className="range-s range-s-max">{maxMilage}</div>
+                            <div className="range-s range-s-max">{milageVl}</div>
                         </div>
 
                     </div>

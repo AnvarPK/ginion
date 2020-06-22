@@ -21,6 +21,7 @@ function useQuery() {
 
 const OnsAanbod = (props) => {
     const { dispatch, language } = props;
+
     let query = useQuery();
     useEffect(() => {
 
