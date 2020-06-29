@@ -5,12 +5,8 @@ import GoogleMap from '../../components/google-map';
 import Formm from '../../components/form';
 const Nl = () => (
     <>
-        <p>Meer en meer klanten financieren een auto bij ons omdat de intrestrate zeer schappelijk is op de
-markt.</p>
-        <p>Om u te helpen bij het aanschaffen van de auto die u zoekt, biedt Ginion Used Cars u verschillende
-financieringsformules aan, aangepast aan uw situatie en tegen de beste voorwaarden.</p>
-        <p>Of u nu kiest voor een maandelijkse aflossingslening of een financiële leasing, neem nu contact op
-met ons team voor een persoonlijk financieringsaanbod.</p>
+        <p>Steeds meer klanten financieren een auto bij ons omdat de intrestrate zeer interessant is.</p>
+        <p>Dankzij onze verschillende financieringsformules bieden we u een voorstel op maat aan tegen de beste voorwaarden zodat de wagen die u zoekt binnen handbereik is. Of u nu kiest voor een lening met maandelijkse aflossingen* of een financiële leasing, neem nu contact op met ons team voor een persoonlijk financieringsaanbod.</p>
         <p>Vraag hier uw simulatie aan, onze verkopers nemen zo snel mogelijk contact op met u.</p>
         <p>* Let op, geld lenen kost ook geld.</p>
 

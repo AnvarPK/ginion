@@ -9,10 +9,7 @@ const Nl = () => (
 
         <div className="div-block-34">
             <div className="text-block-7">GARANTIES</div>
-            <p>Bij Ginion Used Cars geniet elke auto van een garantie van 12 maanden.
-            Al onze voertuigen werden grondig gecontroleerd door onze eigen specialisten. Na grondige
-            technische en optische onderzoek garanderen wij de verkoop van kwaliteitsvoertuigen voor een
-optimaal rijplezier.</p>
+            <p>Ginion Used Cars biedt elke auto aan met een garantie van 12 maanden. Al onze voertuigen werden grondig gecontroleerd door onze eigen specialisten. Na uitvoerige technisch en optisch onderzoek garanderen wij de verkoop van kwaliteitswagens voor een optimaal rijplezier.</p>
             {/* <ul className="list w-list-unstyled">
                 <li>
                     <div className="div-block-32"><img src={Vector} alt="" className="image-8" />
@@ -25,10 +22,7 @@ optimaal rijplezier.</p>
         </div>
         <div className="div-block-34">
             <div className="text-block-7">Eigen werkplaats</div>
-            <p>Ginion Used Cars heeft geïnvesteerd in een professioneel uitgeruste werkplaats in zijn concessie.
-            Daar worden al onze aangekochte wagens gecontroleerd volgens de hoogste kwaliteitsstandaard
-            door professioneel opgeleide technici. Op die manier zijn wij er zeker van dat we enkel de beste
-tweedehandswagens aanbieden. U kan bij ons ook terecht voor onderhoud en herstellingen.</p>
+            <p>Ginion Used Cars heeft geïnvesteerd in een professioneel uitgeruste werkplaats in zijn concessie. Onze hoogopgeleide technici controleren daar al onze aangekochte wagens volgens de hoogste kwaliteitsstandaard. Zo zijn wij er zeker van dat we enkel de beste tweedehandswagens aanbieden. U kan bij ons ook terecht voor onderhoud en herstellingen.</p>
             <p>Ontdek de aankoopvoordelen van een Ginion Used Cars gecertificeerde tweedehands auto:</p>
             <ul className="list w-list-unstyled">
                 <li>
