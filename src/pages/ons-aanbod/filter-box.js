@@ -34,9 +34,11 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
         }
         return item;
     })
+    fuel_types = fuel_types.sort((a, b) => a.label - b.label);
 
     gears = gears.map(item => {
         if (item.label === 'AUTO') item.label = 'AUTOMATIC'
+        if (item.label === 'MANUAL' && language.value === "fr") item.label = 'MANUELLE'
         return item
     })
 
