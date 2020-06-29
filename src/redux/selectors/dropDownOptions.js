@@ -19,9 +19,10 @@ const getData = (vehicles, tag) => {
         return orig.indexOf(item, i + 1) === -1;
     });
 
-    if (tag === "first_reg") {
+    if (tag === "first_reg" || tag === "model" || tag === "fuel_type") {
         filteredItems = filteredItems.sort();
     }
+
 
 
     const options = [...filteredItems].map(item => {
