@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+    Link
+} from "react-router-dom";
 import { connect } from 'react-redux';
 import Header from './vehicle/header';
 import CarDetailSlider from './vehicle/car-detail-slider';
@@ -7,6 +10,7 @@ import Equipment from "./vehicle/equipment";
 import Warranties from '../../components/warranties';
 import GoogleMap from '../../components/google-map';
 import useFormatprice from '../../components/useFormatprice';
+
 
 const OnsAanbodDetail = ({ vehicle, language }) => (<>
     <Header veh={vehicle} />
@@ -33,7 +37,7 @@ const OnsAanbodDetail = ({ vehicle, language }) => (<>
                                     </div>
                                 </div>
                                 <div>
-                                    <div className="div-block-50"><a href="#" className="btn-default">{language.value == "nl" ? "MAAK EEN AFSPRAAK" : "Prenez un rendez-vous"}</a></div>
+                                    <div className="div-block-50"><Link to={`/${language.value}/contact`} className="btn-default">{language.value == "nl" ? "MAAK EEN AFSPRAAK" : "Prenez un rendez-vous"}</Link></div>
                                     <div className="div-block-51">
                                         <div className="text-block-16">{language.value == "nl" ? "U vindt deze wagen bij" : "Cette voiture se trouve chez"}</div>
                                         <h4 className="heading-7">Ginion Used Cars</h4>
