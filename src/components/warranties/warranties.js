@@ -28,7 +28,7 @@ const Warranties = ({ lan }) => {
             <div className="div-block-13">
                 <div className="div-block-14">
                     <div className="div-block-15">
-                        <h3 className="h3">{lan.value === "nl" ? "Onze Ginion Garanties" : "Nos garanties Ginion"}</h3>
+                        <h3 className="h3">{lan.value === "nl" ? "ONZE GARANTIES" : "Nos garanties Ginion"}</h3>
                         <div>
                             <ul className="w-list-unstyled">
                                 {
