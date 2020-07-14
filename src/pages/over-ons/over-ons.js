@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import { connect } from 'react-redux';
 import FindVehicle from '../../components/find-vehicle';
 import GoogleMap from '../../components/google-map';
@@ -23,6 +24,10 @@ const Fr = () => (
 const OverOns = ({ language }) => {
     return (
         <>
+            <Helmet>
+                <title>{language.value === "nl" ? "Over ons  | Ginion Used Cars" : "A propos de nous - Ginion Used Cars"}</title>
+                <meta name="description" content={language.value === "nl" ? "Onze ambitie steunt op één principe: de beste zijn in ons vak! Dat betekent dat wij onze klanten een uitzonderlijke commerciële en technische service bieden." : "Notre ambition repose sur un principe: être le meilleur de notre métier! Nous offrons à nos clients un service commercial et technique d'exception."} />
+            </Helmet>
             <div className="text-banner">
                 <div className="container-ginion">
                     <div className="div-block-30">

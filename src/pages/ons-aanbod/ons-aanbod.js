@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import { connect } from 'react-redux';
 import getVisibleVehicles from '../../redux/selectors/vehicles';
 import { getMakes, getMileage, getModels, getFuelTypes, getGears, getFirstRegs } from '../../redux/selectors/dropDownOptions';
@@ -8,32 +9,15 @@ import Warranties from '../../components/warranties';
 import FilterBox from './filter-box';
 import VehicleList from './vehicle-list';
 
-
 import {
     useLocation
 } from "react-router-dom";
-
-function useQuery() {
-    return new URLSearchParams(useLocation().search);
-}
-
 
 
 const OnsAanbod = (props) => {
     const { dispatch, language } = props;
 
-    let query = useQuery();
     useEffect(() => {
-
-        if (query.get("model")) {
-            const val = { value: query.get("model"), label: query.get("model") }
-            handleDropdownChange(val, 'model')
-        }
-        if (query.get("make")) {
-            const val = { value: query.get("make"), label: query.get("make") }
-            handleDropdownChange(val, 'make')
-        }
-
         return () => {
             dispatch(setFilterEmpty());
         }
@@ -67,6 +51,11 @@ const OnsAanbod = (props) => {
 
     return (
         <>
+            <Helmet>
+                <title>{language.value === "nl" ? "Garantie en diensten | Ginion Used Cars" : "Garanties et services - Ginion Used Cars"}</title>
+                <meta name="description" content={language.value === "nl" ? "Ginion Used Cars biedt elke auto aan met een garantie van 12 maanden. Al onze voertuigen werden grondig gecontroleerd door onze eigen specialisten." : "Toutes les voitures Ginion Used Cars bénéficient de 12 mois de garantie. Tous nos véhicules ont été minutieusement contrôlés par nos propres spécialistes."} />
+            </Helmet>
+
             <div className="banner-ons-aanbod">
                 <div className="div-block-24">
                     <div className="div-block-25">
@@ -113,12 +102,13 @@ const mapStateToProps = (state) => {
     return {
         vehicles: getVisibleVehicles(state.vehicles, state.filters),
         makes: getMakes(state.vehicles),
-        models: getModels(state.vehicles),
+        models: getModels(state.vehicles, state.filters.make),
         mileage: getMileage(state.vehicles),
         fuel_types: getFuelTypes(state.vehicles),
         gears: getGears(state.vehicles),
         first_regs: getFirstRegs(state.vehicles),
-        language: state.language
+        language: state.language,
+        filters: state.filters
     }
 };
 

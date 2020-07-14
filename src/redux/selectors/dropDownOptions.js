@@ -1,10 +1,18 @@
 
 
-const getData = (vehicles, tag) => {
-    let items = [...vehicles].map(item => {
+const getData = (vehicles, tag, make) => {
+
+    if (tag === "model") {
+        vehicles = vehicles.filter(item => {
+            return item['make'] === make
+        })
+    }
+
+    let items = vehicles.map(item => {
         if (tag === "first_reg") return item[tag].split('-')[0];
         return item[tag];
     })
+
     if (tag === "gears") {
 
         items = [...items].map(item => {
@@ -31,11 +39,11 @@ const getData = (vehicles, tag) => {
 
 
 
-    return options;
+    return options.sort((a, b) => a.value > b.value ? 1 : -1);
 }
 export const getMakes = (vehicles) => getData(vehicles, 'make');
 
-export const getModels = (vehicles) => getData(vehicles, 'model');
+export const getModels = (vehicles, make) => getData(vehicles, 'model', make);
 
 export const getMileage = (vehicles) => getData(vehicles, 'mileage');
 

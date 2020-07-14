@@ -14,12 +14,12 @@ import {
     useLocation
 } from "react-router-dom";
 
-function useQuery() {
-    return new URLSearchParams(useLocation().search);
-}
+// function useQuery() {
+//     return new URLSearchParams(useLocation().search);
+// }
 
-const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_regs, handleDropDownChange, handleRangeChnage }) => {
-    let query = useQuery();
+const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_regs, filters, handleDropDownChange, handleRangeChnage }) => {
+    // let query = useQuery();
     const maxMilage = mileage.reduce((max, item) => max >= item.value ? max : item.value, mileage[0].value);
     const [milageVl, setMilageVl] = useState(maxMilage);
 
@@ -33,7 +33,7 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
             item.label = "ESSENCE"
         }
         return item;
-    }).sort((a, b) => a.label - b.label);
+    }).sort((a, b) => a.label > b.label ? 1 : -1);
 
     gears = gears.map(item => {
         if (item.label === 'AUTO') item.label = 'AUTOMATIC'
@@ -61,7 +61,7 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
                             clearable={true}
                             hChange={handleDropDownChange}
                             placeholder={language.value === "nl" ? "Select..." : 'Selectionner...'}
-                            setVal={query.get("make") ? { value: query.get("make"), label: query.get("make") } : 'null'}
+                            setVal={filters.make ? { value: filters.make, label: filters.make } : 'null'}
                         />
                     </div>
                     <div className="div-block-29">
@@ -70,7 +70,7 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
                             tag="model"
                             hChange={handleDropDownChange} clearable={true}
                             placeholder={language.value === "nl" ? "Select..." : 'Selectionner...'}
-                            setVal={query.get("model") ? { value: query.get("model"), label: query.get("model") } : 'null'}
+                            setVal={filters.model ? { value: filters.model, label: filters.model } : 'null'}
                         />
                     </div>
                     <div className="div-block-29">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import { connect } from 'react-redux';
 import Vector from './Vector-2.svg';
 import FindVehicle from '../../components/find-vehicle';
@@ -9,7 +10,7 @@ const Nl = () => (
 
         <div className="div-block-34">
             <div className="text-block-7">GARANTIES</div>
-            <p>Ginion Used Cars biedt elke auto aan met een garantie van 12 maanden. Al onze voertuigen werden grondig gecontroleerd door onze eigen specialisten. Na uitvoerige technisch en optisch onderzoek garanderen wij de verkoop van kwaliteitswagens voor een optimaal rijplezier.</p>
+            <p>Ginion Used Cars biedt elke auto aan met een garantie van 12 maanden. Al onze voertuigen werden grondig gecontroleerd door onze eigen specialisten. Na een uitvoerige technisch en optisch onderzoek garanderen wij de verkoop van kwaliteitswagens voor een optimaal rijplezier.</p>
             {/* <ul className="list w-list-unstyled">
                 <li>
                     <div className="div-block-32"><img src={Vector} alt="" className="image-8" />
@@ -85,7 +86,7 @@ const Fr = () => (
 
         <div className="div-block-34">
             <div className="text-block-7">GARANTIES</div>
-            <p>Toutes nos voitures d’occasion certifiées Ginion Used Cars bénéficie d’une garantie complète de 12 mois. Elles ont été minutieusement inspectées par nos techniciens spécialisés et expérimentés. Après des examens techniques et optiques approfondis nous garantissons la vente de véhicules de qualité pour un plaisir de conduite optimal.</p>
+            <p>Toutes nos voitures d’occasion certifiées Ginion Used Cars bénéficient d’une garantie complète de 12 mois. Elles ont été minutieusement inspectées par nos techniciens spécialisés et expérimentés. Après des examens techniques et optiques approfondis nous garantissons la vente de véhicules de qualité pour un plaisir de conduite optimal.</p>
             {/* <ul className="list w-list-unstyled">
                 <li>
                     <div className="div-block-32"><img src={Vector} alt="" className="image-8" />
@@ -98,12 +99,8 @@ const Fr = () => (
         </div>
         <div className="div-block-34">
             <div className="text-block-7">SERVICES</div>
-            <p>Ginion Used Cars a investi dans un atelier équipé professionnellement. C’est à cet
-            endroit que toutes nos voitures achetées sont vérifiées par nos techniciens formés
-            professionnellement. De cette façon, nous sommes sûrs de proposer les meilleures
-            voitures d&#39;occasion. Grâce à notre atelier, vous pouvez également nous contacter
-pour l&#39;entretien et les réparations.<br /></p>
-            <p>Découvrez les avantages de l’achat d’une voiture d’occasion certifiée Ginion Used Cars :</p>
+            <p>Ginion Used Cars a investi dans un atelier équipé professionnellement. C’est à cet endroit que toutes nos voitures achetées sont vérifiées par nos techniciens spécialement formés. De cette façon, nous sommes sûrs de proposer les meilleures voitures d'occasion. Vous pouvez également bénéficier de notre atelier pour l’entretien et les réparations.<br /></p>
+            <p>Découvrez les avantages de l’achat d’une voiture d’occasion certifiée Ginion Used Cars :</p>
             <ul className="list w-list-unstyled">
                 <li>
                     <div className="div-block-32"><img src={Vector} alt="" className="image-8" />
@@ -169,6 +166,10 @@ const gr = {
 const GarantiesDiensten = (props) => {
     return (
         <>
+            <Helmet>
+                <title>{props.language.value === "nl" ? "Vind uw tweedehandswagen | Ginion Used Cars" : "Trouver votre véhicule d'occasion - Ginion Used Cars"}</title>
+                <meta name="description" content={props.language.value === "nl" ? "Trouver votre véhicule d'occasion - Ginion Used Cars" : "Bienvenue chez Ginion. Nous voulons vous offrir non seulement la meilleure voiture, mais aussi un excellent service. Trouvez votre voiture de rêve maintenant!"} />
+            </Helmet>
             <div className="text-banner">
                 <div className="container-ginion">
                     <div className="div-block-30">

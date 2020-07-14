@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import {
     Link
 } from "react-router-dom";
@@ -12,7 +13,13 @@ import GoogleMap from '../../components/google-map';
 import useFormatprice from '../../components/useFormatprice';
 
 
+
 const OnsAanbodDetail = ({ vehicle, language }) => (<>
+    <Helmet>
+        <title>{language.value === "nl" ? `${vehicle.make} ${vehicle.model} | Ginion Used Cars` : `${vehicle.make} ${vehicle.model} - Ginion Used Cars`}</title>
+        <meta name="description" content={language.value === "nl" ? `Ontdek op deze pagina alle specificaties over ${vehicle.make} ${vehicle.model}. Zit je nog met vragen? Contacteer ons dan!` : `Découvrez toutes les spécifications de ${vehicle.make} ${vehicle.model} sur cette page. Avez-vous d'autres questions? Alors contactez-nous!`} />
+    </Helmet>
+
     <Header veh={vehicle} />
     <div className="detail-body">
         <div className="container-ginion">

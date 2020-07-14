@@ -3,6 +3,7 @@ import Img from './img.jpeg';
 import overlaySrc from './img.jpg';
 import ProgressiveImage from "../../components/ProgressiveImage";
 // import ImgP from './image-18-p-500.png';
+import { Helmet } from "react-helmet";
 
 import FindVehicle from '../../components/find-vehicle';
 import GoogleMap from '../../components/google-map';
@@ -11,6 +12,11 @@ import { connect } from 'react-redux'
 const Contact = ({ lan }) => {
     return (
         <>
+            <Helmet>
+                <title>{lan.value === "nl" ? "Contact  | Ginion Used Cars" : "Contact - Ginion Used Cars"}</title>
+                <meta name="description" content={lan.value === "nl" ? "Heeft u interesse in een wagen of zit u met vragen? Twijfel dan niet om ons te contacteren of spring eens binnen!" : "Êtes-vous intéressé par une voiture ou avez-vous des questions? N'hésitez pas à nous contacter ou à passer en showroom!"} />
+            </Helmet>
+
             <div className="text-banner">
                 <div className="container-ginion">
                     <div className="div-block-30">

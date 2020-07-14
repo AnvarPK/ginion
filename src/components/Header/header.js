@@ -1,4 +1,4 @@
-import React,{useRef,useState,useEffect} from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { setLanguage } from '../../redux/actions/language';
 import Dropdown from 'react-dropdown';
@@ -8,17 +8,19 @@ import { useLocation } from "react-router";
 import {
     Link, withRouter
 } from "react-router-dom";
+import { links } from '../navItems';
 
 const Header = ({ history, dispatch, language }) => {
-    let { pathname, search } = useLocation();
+    // let { pathname, search } = useLocation();
+    let { pathname } = useLocation();
     // const [navOpen, setNavOpen]=useState(false);
-    const [navOpen, setNavOpen]=useState('w-nav-overlay');
+    const [navOpen, setNavOpen] = useState('w-nav-overlay');
     let mobNavContainer = useRef(null);
 
-    useEffect(()=>{
-        const nvContainer= mobNavContainer.current;
+    useEffect(() => {
+        const nvContainer = mobNavContainer.current;
         nvContainer.style.height = `${document.body.clientHeight}px`;
-    },[navOpen])
+    }, [navOpen])
 
     const languageOptions = [
         { value: 'nl', label: 'NL' },
@@ -26,21 +28,25 @@ const Header = ({ history, dispatch, language }) => {
     ]
 
     const _onSelect = function (v) {
+        const lanLink = v.value === "nl" ? "nlLink" : "frLink";
         const [, second, third] = pathname.split('/');
         if (second === v.value) return '';
         dispatch(setLanguage({ ...v }));
-        const newPath = `${pathname.replace(second, v.value)}${search}`;
+        // const newPath = `${pathname.replace(second, v.value)}${search}`;
+        let newPath = `${pathname.replace(second, v.value)}`;
+        if (third) newPath = newPath.replace(third, links[third]);
+        console.log(newPath);
         history.push(newPath)
     }
 
-    const navButtonClick = () =>{
-        navOpen==="w-nav-overlay"?setNavOpen('w-nav-overlay w-nav-overlay--open'):setNavOpen('w-nav-overlay');
+    const navButtonClick = () => {
+        navOpen === "w-nav-overlay" ? setNavOpen('w-nav-overlay w-nav-overlay--open') : setNavOpen('w-nav-overlay');
 
-        
+
     }
 
-    const overlayClick = (e) =>{
-        if(e.target.className===navOpen){
+    const overlayClick = (e) => {
+        if (e.target.className === navOpen) {
             navButtonClick();
         }
     }
@@ -71,13 +77,13 @@ const Header = ({ history, dispatch, language }) => {
                     </div>
                 </div>
             </div>
-            <div className={navOpen} ref={mobNavContainer} data-wf-ignore=""  onClick={overlayClick} >
-            <Navbar
-                        language={language}
-                        options={languageOptions}
-                        onChange={_onSelect}
-                        defaultOption={language}
-                    />
+            <div className={navOpen} ref={mobNavContainer} data-wf-ignore="" onClick={overlayClick} >
+                <Navbar
+                    language={language}
+                    options={languageOptions}
+                    onChange={_onSelect}
+                    defaultOption={language}
+                />
             </div>
         </div>
     );

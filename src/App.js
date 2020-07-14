@@ -54,11 +54,11 @@ function App() {
             <Route path="/nl/contact" component={Contact} />
 
             <Route exact path="/fr" component={Home} />
-            <Route exact path="/fr/ons-aanbod" component={OnsAanbod} />
-            <Route path="/fr/ons-aanbod/:id" component={OnsAanbodDetail} />
-            <Route path="/fr/garanties-diensten" component={GarantiesDiensten} />
-            <Route path="/fr/financiering" component={Financiering} />
-            <Route path="/fr/over-ons" component={OverOns} />
+            <Route exact path="/fr/nos-offres" component={OnsAanbod} />
+            <Route path="/fr/nos-offres/:id" component={OnsAanbodDetail} />
+            <Route path="/fr/garanties-services" component={GarantiesDiensten} />
+            <Route path="/fr/financement" component={Financiering} />
+            <Route path="/fr/a-propos-de-nous" component={OverOns} />
             <Route path="/fr/contact" component={Contact} />
 
             <NotFoundRoute />

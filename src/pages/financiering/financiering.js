@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 import { connect } from 'react-redux';
 import FindVehicle from '../../components/find-vehicle';
 import GoogleMap from '../../components/google-map';
@@ -37,6 +38,10 @@ const fn = {
 const Financiering = (props) => {
     return (
         <>
+            <Helmet>
+                <title>{props.language.value === "nl" ? "Financiering  | Ginion Used Cars" : "Financement - Ginion Used Cars"}</title>
+                <meta name="description" content={props.language.value === "nl" ? "Dankzij onze financieringsformules bieden we u een voorstel op maat aan tegen de beste voorwaarden zodat de wagen die u zoekt binnen handbereik is." : "Grâce à nos formules de financement, profitez d’une offre sur mesure aux meilleures conditions afin que la voiture que vous recherchez soit à portée de main."} />
+            </Helmet>
             <div className="text-banner">
                 <div className="container-ginion">
                     <div className="div-block-30">

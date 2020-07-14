@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { getMakes, getModels } from '../../redux/selectors/dropDownOptions';
-
+import { setMake, setModel } from '../../redux/actions/filters';
 import DropDownSelect from '../../components/drop-down-select';
+import {
+    Link
+} from "react-router-dom";
+import { ons } from '../navItems';
 
-import SubmitButton from '../../components/submit-button';
-
-const FindVehicle = ({ makes, models, language }) => {
-    const [urlMake, setUrlMake] = useState(''),
-        [urlModel, setUrlModel] = useState('');
-
-
+const FindVehicle = ({ makes, models, language, dispatch }) => {
 
     const handleDropdownChange = (value, tag) => {
 
         if (tag === "make") {
-            setUrlMake(value.value);
+            dispatch(setModel(null))
+            dispatch(setMake(value.value))
         }
         else {
-            setUrlModel(value.value);
+            dispatch(setModel(value.value))
         }
     }
 
     const customStyles = {
-        control: (provided, ) => ({
+        control: (provided,) => ({
             // ...provided,
             border: '1px solid #939393',
             height: 38,
@@ -36,7 +35,7 @@ const FindVehicle = ({ makes, models, language }) => {
             borderRadius: 5,
 
         }),
-        input: (provided, ) => ({
+        input: (provided,) => ({
             ...provided,
             paddingTop: 9,
             paddingBottom: 9,
@@ -45,14 +44,14 @@ const FindVehicle = ({ makes, models, language }) => {
             ...provided,
             margin: 0
         }),
-        valueContainer: (provided, ) => ({
+        valueContainer: (provided,) => ({
             ...provided,
             paddingTop: 0,
             paddingBottom: 0,
             paddingLeft: 12,
             paddingRight: 12
         }),
-        dropdownIndicator: (provided, ) => ({
+        dropdownIndicator: (provided,) => ({
             ...provided,
             display: 'none',
         }),
@@ -70,6 +69,7 @@ const FindVehicle = ({ makes, models, language }) => {
         nl: "Zoek uw voertuig",
         fr: "Chercher votre voiture"
     }
+    const lanLink = language.value === "nl" ? "nlLink" : "frLink";
 
     return (
         <>
@@ -98,7 +98,9 @@ const FindVehicle = ({ makes, models, language }) => {
                         />
                     </div>
 
-                    <SubmitButton mk={urlMake} ml={urlModel} language={language} />
+                    <Link to={`${ons[lanLink]}`} className="submit-button w-button">
+                        {language.value === "nl" ? "Toon modellen" : "Voir les modèles"}
+                    </Link>
                 </div>
             </div>
         </>
@@ -108,7 +110,7 @@ const FindVehicle = ({ makes, models, language }) => {
 const mapStateToProps = (state) => {
     return {
         makes: getMakes(state.vehicles),
-        models: getModels(state.vehicles),
+        models: getModels(state.vehicles, state.filters.make),
         language: state.language
     }
 };

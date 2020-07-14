@@ -5,12 +5,13 @@ import overlaySrc from './size-2.jpg';
 import {
     Link
 } from "react-router-dom";
-
+import { ons } from '../../components/navItems';
 
 
 const VehicleBox = ({ data, lan }) => {
     const { id, version, make, model, sell_price, img, gears } = data;
-    const url = `/${lan.value}/ons-aanbod/${id}`;
+    const lanLink = lan.value === "nl" ? "nlLink" : "frLink";
+    const url = `${ons[lanLink]}/${id}`;
 
     return (<Link to={url} className="link-block-2 w-inline-block">
         <div className="div-block-18">

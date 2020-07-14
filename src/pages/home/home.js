@@ -1,33 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import { connect } from 'react-redux';
 import {
     getMostViewed
 } from '../../redux/selectors/vehicles';
 import { getMakes, getModels } from '../../redux/selectors/dropDownOptions';
+import { setMake, setModel } from '../../redux/actions/filters';
 import Warranties from '../../components/warranties';
 import MostViwed from './most-viewed';
 import GoogleMap from '../../components/google-map';
 import DropDownSelect from '../../components/drop-down-select';
-import SubmitButton from '../../components/submit-button';
+import {
+    Link
+} from "react-router-dom";
 import './home.css';
+import { ons } from '../../components/navItems';
 
-const Home = ({ makes, models, language, mostViewed }) => {
+const Home = ({ makes, models, language, mostViewed, dispatch }) => {
     const [urlMake, setUrlMake] = useState(''),
         [urlModel, setUrlModel] = useState('');
 
-
-
     const handleDropdownChange = (value, tag) => {
         if (tag === "make") {
-            setUrlMake(value.value);
+            dispatch(setModel(null))
+            // setUrlModel('');
+            dispatch(setMake(value.value))
+            // setUrlMake(value.value);
         }
         else {
-            setUrlModel(value.value);
+            // setUrlModel(value.value);
+            dispatch(setModel(value.value))
         }
     }
 
     const customStyles = {
-        control: (provided, ) => ({
+        control: (provided,) => ({
             border: '1px solid #939393',
             height: 38,
             marginBottom: 15,
@@ -39,7 +46,7 @@ const Home = ({ makes, models, language, mostViewed }) => {
             borderRadius: 5,
 
         }),
-        input: (provided, ) => ({
+        input: (provided,) => ({
             ...provided,
             paddingTop: 9,
             paddingBottom: 9,
@@ -48,14 +55,14 @@ const Home = ({ makes, models, language, mostViewed }) => {
             ...provided,
             margin: 0
         }),
-        valueContainer: (provided, ) => ({
+        valueContainer: (provided,) => ({
             ...provided,
             paddingTop: 0,
             paddingBottom: 0,
             paddingLeft: 12,
             paddingRight: 12
         }),
-        dropdownIndicator: (provided, ) => ({
+        dropdownIndicator: (provided,) => ({
             ...provided,
             display: 'none',
         }),
@@ -72,9 +79,14 @@ const Home = ({ makes, models, language, mostViewed }) => {
         nl: "Zoek uw voertuig",
         fr: "Chercher votre voiture"
     }
-
+    const lanLink = language.value === "nl" ? "nlLink" : "frLink";
     return (
         <>
+            <Helmet>
+                <title>{language.value === "nl" ? "Vind uw tweedehandswagen | Ginion Used Cars" : "Trouver votre véhicule d'occasion - Ginion Used Cars"}</title>
+                <meta name="description" content={language.value === "nl" ? "Trouver votre véhicule d'occasion - Ginion Used Cars" : "Bienvenue chez Ginion. Nous voulons vous offrir non seulement la meilleure voiture, mais aussi un excellent service. Trouvez votre voiture de rêve maintenant!"} />
+            </Helmet>
+
             <div className="home-banner" >
                 <div className="container-ginion">
                     <div className="div-block-6">
@@ -104,7 +116,9 @@ const Home = ({ makes, models, language, mostViewed }) => {
                                                 cs={customStyles}
                                             />
                                         </div>
-                                        <SubmitButton mk={urlMake} ml={urlModel} language={language} />
+                                        <Link to={`${ons[lanLink]}`} className="submit-button w-button">
+                                            {language.value === "nl" ? "Toon modellen" : "Voir les modèles"}
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -131,7 +145,7 @@ const mapStateToProps = (state) => {
     return {
         mostViewed: getMostViewed(state.vehicles),
         makes: getMakes(state.vehicles),
-        models: getModels(state.vehicles),
+        models: getModels(state.vehicles, state.filters.make),
         language: state.language
     }
 };
