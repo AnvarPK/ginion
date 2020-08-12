@@ -24,7 +24,7 @@ const ImportFinanciering = () => import('./pages/financiering');
 const ImportOverOns = () => import('./pages/over-ons');
 const ImportContact = () => import('./pages/contact');
 
-const GoHome = () => (<Redirect to='/nl' />);
+const GoHome = () => (<Redirect to='/fr' />);
 
 function App() {
   const OnsAanbod = usePrefetch(ImportOnsAanbod);

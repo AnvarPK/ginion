@@ -1,6 +1,11 @@
 RewriteEngine On
-RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^ginionusedcars.com [NC]
 RewriteRule ^(.*)$ https://www.ginionusedcars.com/$1 [R=301,L]
+
+Redirect 301 /fr/ons-aanbod /fr/nos-offres
+Redirect 301 /fr/garanties-diensten /fr/garanties-services
+Redirect 301 /fr/financiering /fr/financement
+Redirect 301 /fr/over-ons /fr/a-propos-de-nous
 
 <IfModule mod_rewrite.c>
     RewriteEngine On

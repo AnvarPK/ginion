@@ -1,3 +1,4 @@
+import vehicles from "./vehicles";
 
 
 const getData = (vehicles, tag, make) => {
@@ -23,6 +24,7 @@ const getData = (vehicles, tag, make) => {
         })
     }
 
+
     let filteredItems = items.filter(function (item, i, orig) {
         return orig.indexOf(item, i + 1) === -1;
     });
@@ -32,23 +34,28 @@ const getData = (vehicles, tag, make) => {
     }
 
 
-
     const options = [...filteredItems].map(item => {
         return { value: item, label: item }
     })
 
 
 
-    return options.sort((a, b) => a.value > b.value ? 1 : -1);
+    return options.sort((a, b) => a.value.toLowerCase() > b.value.toLowerCase() ? 1 : -1);
 }
+
+
 export const getMakes = (vehicles) => getData(vehicles, 'make');
 
 export const getModels = (vehicles, make) => getData(vehicles, 'model', make);
+
+export const getBodyType = (vehicles) => getData(vehicles, 'body_type');
 
 export const getMileage = (vehicles) => getData(vehicles, 'mileage');
 
 export const getFuelTypes = (vehicles) => getData(vehicles, 'fuel_type');
 
 export const getGears = (vehicles) => getData(vehicles, 'gears');
+
+export const getSellPrice = (vehicles) => getData(vehicles, 'sell_price');
 
 export const getFirstRegs = (vehicles) => getData(vehicles, 'first_reg');

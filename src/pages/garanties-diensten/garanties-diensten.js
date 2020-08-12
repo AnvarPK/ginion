@@ -167,8 +167,8 @@ const GarantiesDiensten = (props) => {
     return (
         <>
             <Helmet>
-                <title>{props.language.value === "nl" ? "Vind uw tweedehandswagen | Ginion Used Cars" : "Trouver votre véhicule d'occasion - Ginion Used Cars"}</title>
-                <meta name="description" content={props.language.value === "nl" ? "Trouver votre véhicule d'occasion - Ginion Used Cars" : "Bienvenue chez Ginion. Nous voulons vous offrir non seulement la meilleure voiture, mais aussi un excellent service. Trouvez votre voiture de rêve maintenant!"} />
+                <title>{props.language.value === "nl" ? "Garantie en diensten | Ginion Used Cars" : "Garanties et services - Ginion Used Cars"}</title>
+                <meta name="description" content={props.language.value === "nl" ? "Ginion Used Cars biedt elke auto aan met een garantie van 12 maanden. Al onze voertuigen werden grondig gecontroleerd door onze eigen specialisten." : "Toutes les voitures Ginion Used Cars bénéficient de 12 mois de garantie. Tous nos véhicules ont été minutieusement contrôlés par nos propres spécialistes."} />
             </Helmet>
             <div className="text-banner">
                 <div className="container-ginion">

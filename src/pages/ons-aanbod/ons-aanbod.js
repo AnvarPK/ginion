@@ -2,12 +2,13 @@ import React, { useEffect } from 'react';
 import { Helmet } from "react-helmet";
 import { connect } from 'react-redux';
 import getVisibleVehicles from '../../redux/selectors/vehicles';
-import { getMakes, getMileage, getModels, getFuelTypes, getGears, getFirstRegs } from '../../redux/selectors/dropDownOptions';
-import { setMake, setModel, setMileage, setFuelType, setGears, setFirstReg, setFilterEmpty } from '../../redux/actions/filters';
+import { getMakes, getMileage, getModels, getBodyType, getFuelTypes, getGears, getSellPrice, getFirstRegs } from '../../redux/selectors/dropDownOptions';
+import { setMake, setModel, setBodyType, setMileage, setFuelType, setGears, setSellPrice, setFirstReg, setFilterEmpty } from '../../redux/actions/filters';
 import GoogleMap from '../../components/google-map';
 import Warranties from '../../components/warranties';
 import FilterBox from './filter-box';
 import VehicleList from './vehicle-list';
+
 
 import {
     useLocation
@@ -32,6 +33,8 @@ const OnsAanbod = (props) => {
                 return dispatch(setMake(v.value));
             case 'model':
                 return dispatch(setModel(v.value));
+            case 'body_type':
+                return dispatch(setBodyType(v.value));
             case 'fuel_type':
                 return dispatch(setFuelType(v.value));
             case 'mileage':
@@ -49,11 +52,15 @@ const OnsAanbod = (props) => {
         return dispatch(setMileage(newValue));
     }
 
+    const handleRangePriceChange = (newValue, props) => {
+        return dispatch(setSellPrice(newValue));
+    }
+
     return (
         <>
             <Helmet>
-                <title>{language.value === "nl" ? "Garantie en diensten | Ginion Used Cars" : "Garanties et services - Ginion Used Cars"}</title>
-                <meta name="description" content={language.value === "nl" ? "Ginion Used Cars biedt elke auto aan met een garantie van 12 maanden. Al onze voertuigen werden grondig gecontroleerd door onze eigen specialisten." : "Toutes les voitures Ginion Used Cars bénéficient de 12 mois de garantie. Tous nos véhicules ont été minutieusement contrôlés par nos propres spécialistes."} />
+                <title>{language.value === "nl" ? "Ons aanbod | Ginion Used Cars" : "Notre gamme - Ginion Used Cars"}</title>
+                <meta name="description" content={language.value === "nl" ? "Ontdek op deze pagina ons ruime aanbod van tweedehandswagens. Selecteer op merk, model, brandstof, kilometerafstand en versnellingsbak." : "Découvrez notre large gamme de voitures d'occasion. Sélectionnez par marque, modèle, carburant, kilométrage et boîte de vitesses."} />
             </Helmet>
 
             <div className="banner-ons-aanbod">
@@ -73,6 +80,7 @@ const OnsAanbod = (props) => {
                                 {...props}
                                 handleDropDownChange={handleDropdownChange}
                                 handleRangeChnage={handleRangeChnage}
+                                handleRangePriceChange={handleRangePriceChange}
                             />
                             <div className="w-col w-col-9">
                                 <div className="w-layout-grid grid-2">
@@ -103,7 +111,9 @@ const mapStateToProps = (state) => {
         vehicles: getVisibleVehicles(state.vehicles, state.filters),
         makes: getMakes(state.vehicles),
         models: getModels(state.vehicles, state.filters.make),
+        body_types: getBodyType(state.vehicles),
         mileage: getMileage(state.vehicles),
+        sell_price: getSellPrice(state.vehicles),
         fuel_types: getFuelTypes(state.vehicles),
         gears: getGears(state.vehicles),
         first_regs: getFirstRegs(state.vehicles),

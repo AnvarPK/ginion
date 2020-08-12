@@ -35,7 +35,7 @@ const Header = ({ history, dispatch, language }) => {
         // const newPath = `${pathname.replace(second, v.value)}${search}`;
         let newPath = `${pathname.replace(second, v.value)}`;
         if (third) newPath = newPath.replace(third, links[third]);
-        console.log(newPath);
+       
         history.push(newPath)
     }
 

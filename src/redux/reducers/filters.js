@@ -3,10 +3,12 @@
 const filtersReducerDefaultState = {
     make: undefined,
     model: undefined,
+    body_type: undefined,
     mileage: undefined,
     fuel_type: undefined,
     gears: undefined,
-    first_reg: undefined
+    first_reg: undefined,
+    sell_price: undefined
 };
 
 export default (state = filtersReducerDefaultState, action) => {
@@ -20,6 +22,11 @@ export default (state = filtersReducerDefaultState, action) => {
             return {
                 ...state,
                 model: action.model
+            };
+        case 'SET_BODY_TYPE':
+            return {
+                ...state,
+                body_type: action.body_type
             };
         case 'SET_MILEAGE':
             return {
@@ -36,7 +43,11 @@ export default (state = filtersReducerDefaultState, action) => {
                 ...state,
                 gears: action.gears
             };
-        case 'SET_FIRST_REG':
+        case 'SET_SELL_PRICE':
+            return {
+                ...state,
+                sell_price: action.sell_price
+            };
             return {
                 ...state,
                 first_reg: action.first_reg

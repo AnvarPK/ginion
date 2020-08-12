@@ -1,9 +1,9 @@
 // Vehicle Reducer
 const url = window.location.pathname;
-const lan = url === "/" || url === "/ginion/" || url === "/ginion" ? true : url.includes('/nl');
+const lan = url === "/" || url === "/ginion/" || url === "/ginion" ? true : url.includes('/fr');
 const languageDefaultState = {
-    value: lan ? 'nl' : 'fr',
-    label: lan ? 'NL' : 'FR'
+    value: lan ? 'fr' : 'nl',
+    label: lan ? 'FR' : 'NL'
 };
 
 

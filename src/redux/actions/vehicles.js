@@ -11,7 +11,6 @@ export const addVehicle = (
         gears = '',
         first_reg = '',
         sell_price = '',
-
         mileage = "",
         kw = "",
         hp = "",
@@ -52,7 +51,6 @@ export const setVehicles = (vehicles) => ({
 export const startSetVehicles = () => {
     const url = `${process.env.PUBLIC_URL}/data.xml`;
     return (dispatch) => {
-
         return fetch(url)
             .then(response => {
                 return response.text();
@@ -77,7 +75,7 @@ export const startSetVehicles = () => {
                         version: item.getElementsByTagName('version')[0].innerHTML,
                         model: item.getElementsByTagName('model')[0].innerHTML,
                         make: item.getElementsByTagName('make')[0].innerHTML,
-                        type: item.getElementsByTagName('type')[0].innerHTML,
+                        body_type: item.getElementsByTagName('body_type')[0].innerHTML, //body_type
                         fuel_type: item.getElementsByTagName('fuel_type')[0].innerHTML,
                         gears: item.getElementsByTagName('gears')[0].innerHTML,
                         first_reg: item.getElementsByTagName('first_reg')[0].innerHTML,

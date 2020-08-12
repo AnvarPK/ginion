@@ -13,17 +13,18 @@ import "@reach/slider/styles.css";
 import {
     useLocation
 } from "react-router-dom";
-
+import useFormatprice from '../../components/useFormatprice';
 // function useQuery() {
 //     return new URLSearchParams(useLocation().search);
 // }
 
-const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_regs, filters, handleDropDownChange, handleRangeChnage }) => {
+const FilterBox = ({ language, makes, models, body_types, fuel_types, mileage, gears, sell_price, first_regs, filters, handleDropDownChange, handleRangeChnage, handleRangePriceChange }) => {
     // let query = useQuery();
     const maxMilage = mileage.reduce((max, item) => max >= item.value ? max : item.value, mileage[0].value);
+    const maxSellPrice = sell_price.reduce((max, item) => max >= item.value ? max : item.value, sell_price[0].value);
+    const minSellPrice = sell_price.reduce((min, item) => min <= item.value ? min : item.value, sell_price[0].value);
     const [milageVl, setMilageVl] = useState(maxMilage);
-
-
+    const [sellPriceVL, setSellPriceVL] = useState(maxSellPrice);
 
     fuel_types = fuel_types.map(item => {
         if (item.label === "GAS" && language.value === "nl") {
@@ -45,6 +46,12 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
         setMilageVl(newValue);
         handleRangeChnage(newValue, props)
     }
+
+    const rangePriceChange = (newValue, props) => {
+        setSellPriceVL(newValue);
+        handleRangePriceChange(newValue, props)
+    }
+
     return (
         <div className="w-col w-col-3 " style={{ marginBottom: "25px" }}>
             <div className="div-block-27">
@@ -74,6 +81,15 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
                         />
                     </div>
                     <div className="div-block-29">
+                        <div className="text-block-5">TYPE</div>
+                        <DropDownSelect options={body_types}
+                            tag="body_type"
+                            hChange={handleDropDownChange} clearable={true}
+                            placeholder={language.value === "nl" ? "Select..." : 'Selectionner...'}
+                            setVal={filters.body_type ? { value: filters.body_type, label: filters.body_type } : 'null'}
+                        />
+                    </div>
+                    <div className="div-block-29">
                         <div className="text-block-5">{language.value === "nl" ? "Brandstof" : "Carburant"}</div>
                         <DropDownSelect options={fuel_types}
                             tag="fuel_type"
@@ -89,11 +105,17 @@ const FilterBox = ({ language, makes, models, fuel_types, mileage, gears, first_
 
                     </div>
                     <div className="div-block-29">
+                        <div className="text-block-5">{language.value === "nl" ? "PRIJS" : "PRIX"}</div>
+                        <div className='slider-wrap'>
+                            <Slider min={0} max={maxSellPrice} step={10}
+                                defaultValue={maxSellPrice}
+                                onChange={rangePriceChange}
+                            />
+                            <div className="range-s range-s-max">€{useFormatprice(sellPriceVL)}</div>
+                        </div>
+                    </div>
+                    <div className="div-block-29">
                         <div className="text-block-5">{language.value === "nl" ? "KILOMETERSTAND" : "Kilométrage"}</div>
-                        {/* <DropDownSelect options={mileage}
-                            tag="mileage"
-                            placeholder={language.value === "nl" ? "Select..." : 'Selectionner...'}
-                            hChange={handleDropDownChange} clearable={true} /> */}
                         <div className='slider-wrap'>
                             <Slider min={0} max={maxMilage} step={10}
                                 defaultValue={maxMilage}

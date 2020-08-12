@@ -9,6 +9,11 @@ export const setModel = (model) => ({
     model
 });
 
+export const setBodyType = (body_type) => ({
+    type: 'SET_BODY_TYPE',
+    body_type
+});
+
 export const setFuelType = (fuel_type) => ({
     type: 'SET_FUEL_TYPE',
     fuel_type
@@ -17,6 +22,11 @@ export const setFuelType = (fuel_type) => ({
 export const setGears = (gears) => ({
     type: 'SET_GEARS',
     gears
+});
+
+export const setSellPrice = (sell_price) => ({
+    type: 'SET_SELL_PRICE',
+    sell_price
 });
 
 export const setFirstReg = (first_reg) => ({

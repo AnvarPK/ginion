@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { hydrate, render } from 'react-dom';
+// import { render } from 'react-snapshot';
 
 import { Provider } from 'react-redux'
 import configureStore from './redux/store/configureStore';
@@ -19,14 +20,15 @@ const Jsx = () => (
   </React.StrictMode>
 )
 
-ReactDOM.render(<MainLoader />, document.getElementById('root'));
+
+const rootElement = document.getElementById("root");
+render(<MainLoader />, rootElement);
+
+
 
 store.dispatch(startSetVehicles()).then(() => {
-  ReactDOM.render(
-    <Jsx />
-    ,
-    document.getElementById('root')
-  );
+
+  render(<Jsx />, rootElement);
 })
 // "homepage": "http://codeandhue.com/ginion",
 

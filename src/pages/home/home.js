@@ -84,7 +84,7 @@ const Home = ({ makes, models, language, mostViewed, dispatch }) => {
         <>
             <Helmet>
                 <title>{language.value === "nl" ? "Vind uw tweedehandswagen | Ginion Used Cars" : "Trouver votre véhicule d'occasion - Ginion Used Cars"}</title>
-                <meta name="description" content={language.value === "nl" ? "Trouver votre véhicule d'occasion - Ginion Used Cars" : "Bienvenue chez Ginion. Nous voulons vous offrir non seulement la meilleure voiture, mais aussi un excellent service. Trouvez votre voiture de rêve maintenant!"} />
+                <meta name="description" content={language.value === "nl" ? "Welkom bij Ginion. Als organisatie willen we u niet alleen de beste wagen geven, maar ook een uitstekende service. Zoek nu uw droomwagen!" : "Bienvenue chez Ginion. Nous voulons vous offrir non seulement la meilleure voiture, mais aussi un excellent service. Trouvez votre voiture de rêve maintenant!"} />
             </Helmet>
 
             <div className="home-banner" >
