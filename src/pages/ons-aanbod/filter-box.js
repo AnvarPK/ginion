@@ -26,6 +26,46 @@ const FilterBox = ({ language, makes, models, body_types, fuel_types, mileage, g
     const [milageVl, setMilageVl] = useState(maxMilage);
     const [sellPriceVL, setSellPriceVL] = useState(maxSellPrice);
 
+    const bodyTypeLan = {
+        fr: {
+
+            'UTILITY': 'Utilitaire',
+            'GOLD': 'Or',
+            'PICKUP': 'Pick up',
+            'MONOSPACE': 'Monospace',
+            'COUPE': 'Coupé',
+            'CONVERTIBLE': 'Cabriolet',
+            'BREAK': 'Break',
+            'OTHER': 'Autres',
+            '4/5DOORS': '4/5 portes',
+            '2/3DOORS': '2/3 portes'
+        },
+        nl: {
+            'UTILITY': 'Bedrijfsvoertuig',
+            'GOLD': 'Goud',
+            'PICKUP': 'Pick up',
+            'MONOSPACE': 'MPV',
+            'COUPE': 'Coupé',
+            'CONVERTIBLE': 'Cabriolet',
+            'BREAK': 'Break',
+            'OTHER': 'Anders',
+            '4/5DOORS': '4/5 deurs',
+            '2/3DOORS': '2/3 deurs'
+        }
+    }
+
+    body_types = body_types.map(item => {
+        if (item.label in bodyTypeLan.fr) {
+            if (language.value === "nl") {
+                item.label = bodyTypeLan.nl[item.label]
+            }
+            else if (language.value === "fr") {
+                item.label = bodyTypeLan.fr[item.label]
+            }
+        }
+        else return item;
+    }).sort((a, b) => a.label > b.label ? 1 : -1);
+
     fuel_types = fuel_types.map(item => {
         if (item.label === "GAS" && language.value === "nl") {
             item.label = "BENZINE"
@@ -35,6 +75,8 @@ const FilterBox = ({ language, makes, models, body_types, fuel_types, mileage, g
         }
         return item;
     }).sort((a, b) => a.label > b.label ? 1 : -1);
+
+
 
     gears = gears.map(item => {
         if (item.label === 'AUTO') item.label = 'AUTOMATIC'
