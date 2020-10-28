@@ -34,5 +34,6 @@ export const links = {
     "financement": "financiering",
     "over-ons": "a-propos-de-nous",
     "a-propos-de-nous": "over-ons",
-    "contact": "contact"
+    "contact": "contact",
+    "cookies": "cookies",
 }

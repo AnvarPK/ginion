@@ -42,8 +42,9 @@ const Footer = ({ language }) => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="footer-bottom">
                     <div className="text-block-2">© 2020 - Ginion group</div>
+                    <div className="text-block-2">  <NavLink to={`/${language.value}/cookies`}>Cookies</NavLink></div>
                 </div>
             </footer>
         </>

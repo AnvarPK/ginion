@@ -1,0 +1,64 @@
+.cookiesInner {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.text-block-head {
+  padding-bottom: 18px;
+  font-family: Cabin, sans-serif;
+  color: #444;
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.text-block-sub {
+  padding-bottom: 18px;
+  font-family: Cabin, sans-serif;
+  color: #444;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+p b{
+  font-family: Cabin, sans-serif;
+}
+.small-head{
+  padding-bottom: 18px;
+}
+@media screen and (max-width: 991px) {
+  .text-block-head {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .text-block-sub {
+    font-size: 17px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .text-block-head {
+    padding-bottom: 14px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .text-block-sub {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  .small-head{
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .text-block-head {
+    padding-bottom: 10px;
+  }
+  .text-block-sub {
+    padding-bottom: 10px;
+  }
+  .small-head{
+    padding-bottom: 10px;
+  }
+}

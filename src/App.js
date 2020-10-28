@@ -16,6 +16,7 @@ import Home from './pages/home';
 import Footer from './components/Footer';
 import Static from "./components/static";
 import NotFoundRoute from './pages/not-found-route';
+import Cookies from './pages/cookies';
 
 const ImportOnsAanbod = () => import('./pages/ons-aanbod');
 const ImportOnsAanbodDetail = () => import('./pages/ons-aanbod-detail');
@@ -23,6 +24,7 @@ const ImportGarantiesDiensten = () => import('./pages/garanties-diensten');
 const ImportFinanciering = () => import('./pages/financiering');
 const ImportOverOns = () => import('./pages/over-ons');
 const ImportContact = () => import('./pages/contact');
+const ImportCookies = () => import('./pages/cookies');
 
 const GoHome = () => (<Redirect to='/fr' />);
 
@@ -33,6 +35,7 @@ function App() {
   const Financiering = usePrefetch(ImportFinanciering);
   const OverOns = usePrefetch(ImportOverOns);
   const Contact = usePrefetch(ImportContact);
+  const Cokkies= usePrefetch(ImportCookies);
 
 
   return (
@@ -52,6 +55,7 @@ function App() {
             <Route path="/nl/financiering" component={Financiering} />
             <Route path="/nl/over-ons" component={OverOns} />
             <Route path="/nl/contact" component={Contact} />
+            <Route path="/nl/cookies" component={Cookies} />
 
             <Route exact path="/fr" component={Home} />
             <Route exact path="/fr/nos-offres" component={OnsAanbod} />
@@ -59,7 +63,7 @@ function App() {
             <Route path="/fr/garanties-services" component={GarantiesDiensten} />
             <Route path="/fr/financement" component={Financiering} />
             <Route path="/fr/a-propos-de-nous" component={OverOns} />
-            <Route path="/fr/contact" component={Contact} />
+            <Route path="/fr/cookies" component={Cookies} />
 
             <NotFoundRoute />
           </Switch>
