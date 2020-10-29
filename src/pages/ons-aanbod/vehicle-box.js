@@ -9,7 +9,7 @@ import { ons } from '../../components/navItems';
 
 
 const VehicleBox = ({ data, lan }) => {
-    const { id, version, make, model, sell_price, img, gears } = data;
+    const { id, version, make, model, sell_price, img } = data;
     const lanLink = lan.value === "nl" ? "nlLink" : "frLink";
     const url = `${ons[lanLink]}/${id}`;
 

@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { connect } from 'react-redux';
 import usePrefetch from './usePrefetch';
 import './App.css';
@@ -9,6 +9,7 @@ import {
   Redirect
 } from "react-router-dom";
 
+
 import getVisibleVehicles from './redux/selectors/vehicles';
 import ScrollToTop from './components/scroll-top';
 import Header from './components/Header';
@@ -16,7 +17,6 @@ import Home from './pages/home';
 import Footer from './components/Footer';
 import Static from "./components/static";
 import NotFoundRoute from './pages/not-found-route';
-import Cookies from './pages/cookies';
 
 const ImportOnsAanbod = () => import('./pages/ons-aanbod');
 const ImportOnsAanbodDetail = () => import('./pages/ons-aanbod-detail');
@@ -28,19 +28,26 @@ const ImportCookies = () => import('./pages/cookies');
 
 const GoHome = () => (<Redirect to='/fr' />);
 
-function App() {
+function App({ lan }) {
   const OnsAanbod = usePrefetch(ImportOnsAanbod);
   const OnsAanbodDetail = usePrefetch(ImportOnsAanbodDetail);
   const GarantiesDiensten = usePrefetch(ImportGarantiesDiensten);
   const Financiering = usePrefetch(ImportFinanciering);
   const OverOns = usePrefetch(ImportOverOns);
   const Contact = usePrefetch(ImportContact);
-  const Cokkies= usePrefetch(ImportCookies);
+  const Cookies = usePrefetch(ImportCookies);
 
-
+  useEffect(() => {
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.id="cookieyes";
+    s.src = lan.value === "nl"?"https://cdn-cookieyes.com/client_data/93c740fa32c6d9debb91faa8.js":"https://cdn-cookieyes.com/client_data/ca542de5f9b63d04747782c5.js";
+    document.head.appendChild(s);
+  },[])
   return (
     <Router   >
       {/* basename='/ginion' */}
+
       <ScrollToTop />
       <Header />
       <div className="contet-sec">
@@ -76,7 +83,8 @@ function App() {
 
 const mapDispatchToProps = (state) => {
   return {
-    vehicles: getVisibleVehicles(state.vehicles, state.filters)
+    vehicles: getVisibleVehicles(state.vehicles, state.filters),
+    lan: state.language
   }
 };
 

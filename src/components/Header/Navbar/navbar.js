@@ -28,9 +28,13 @@ const Navbar = ({ options, language, onChange }) => {
                 <NavLink to={`${con[lanLink]}`} activeClassName="w--current" className="nav-link-2 w-nav-link">{con[language.value]}</NavLink>
             </div >
             <div className="div-block-2">
-                <a href="https://www.facebook.com/ginionusedcars/?ref=br_rs" target="_blank" className="link-block w-inline-block">
+                <a href="https://www.facebook.com/ginionusedcars/?ref=br_rs" target="_blank" className="link-block w-inline-block"
+                 rel="noopener noreferrer" 
+                 >
                     <img src={FB} alt="" className="image-3" /></a>
-                <a href="https://www.instagram.com/giniongroup/?hl=nl" target="_blank" className="link-block w-inline-block">
+                <a href="https://www.instagram.com/giniongroup/?hl=nl" target="_blank" className="link-block w-inline-block"
+                 rel="noopener noreferrer" >
+
                     <img src={Insta} alt="" className="image-3" /></a>
             </div>
             <div className="div-block-3">
@@ -44,12 +48,4 @@ const Navbar = ({ options, language, onChange }) => {
         </nav >
     )
 };
-
-const mapStateToProps = (state) => {
-    return {
-        language: state.language
-    }
-};
-
-{/* export default connect(mapStateToProps)(Navbar);  */ }
 export default Navbar; 

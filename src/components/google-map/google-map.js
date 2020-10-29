@@ -1,4 +1,4 @@
-import React, { Component, createRef } from 'react'
+import React, { Component } from 'react'
 
 class GoogleMap extends Component {
     googleMapRef = React.createRef()

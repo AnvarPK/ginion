@@ -9,7 +9,6 @@ import {
     Link, withRouter
 } from "react-router-dom";
 import { links } from '../navItems';
-import { Helmet } from "react-helmet";
 
 const Header = ({ history, dispatch, language }) => {
     // let { pathname, search } = useLocation();
@@ -29,9 +28,7 @@ const Header = ({ history, dispatch, language }) => {
     ]
 
     const _onSelect = function (v) {
-        const lanLink = v.value === "nl" ? "nlLink" : "frLink";
         const [, second, third] = pathname.split('/');
-        console.log(pathname);
         if (second === v.value) return '';
         dispatch(setLanguage({ ...v }));
         // const newPath = `${pathname.replace(second, v.value)}${search}`;
@@ -54,45 +51,41 @@ const Header = ({ history, dispatch, language }) => {
     }
 
     return (
-        <>
-            <Helmet>
-                <script id="cookieyes" type="text/javascript" src={language.value === "nl" ? 'https://cdn-cookieyes.com/client_data/93c740fa32c6d9debb91faa8.js':'https://cdn-cookieyes.com/client_data/ca542de5f9b63d04747782c5.js'}></script>
-            </Helmet>
-            <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" className="main-navbar w-nav">
-                <div className="container-ginion w-container">
-                    <div className="div-block">
-                        <Link to={`/${language.value}`} className="brand w-nav-brand">
-                            <img src={Logo} alt="" className="image-2" /></Link>
 
-                        <Navbar
-                            language={language}
-                            options={languageOptions}
-                            onChange={_onSelect}
-                            defaultOption={language}
-                        />
+        <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" className="main-navbar w-nav">
+            <div className="container-ginion w-container">
+                <div className="div-block">
+                    <Link to={`/${language.value}`} className="brand w-nav-brand">
+                        <img src={Logo} alt="" className="image-2" /></Link>
 
-                        <div className="menu-button w-nav-button" onClick={navButtonClick}>
-                            <div className="icon-2 w-icon-nav-menu"></div>
-                        </div>
-
-                        <div className="div-block-5">
-                            <Dropdown options={languageOptions}
-                                onChange={_onSelect}
-                                defaultOption={language}
-                                value={language} />
-                        </div>
-                    </div>
-                </div>
-                <div className={navOpen} ref={mobNavContainer} data-wf-ignore="" onClick={overlayClick} >
                     <Navbar
                         language={language}
                         options={languageOptions}
                         onChange={_onSelect}
                         defaultOption={language}
                     />
+
+                    <div className="menu-button w-nav-button" onClick={navButtonClick}>
+                        <div className="icon-2 w-icon-nav-menu"></div>
+                    </div>
+
+                    <div className="div-block-5">
+                        <Dropdown options={languageOptions}
+                            onChange={_onSelect}
+                            defaultOption={language}
+                            value={language} />
+                    </div>
                 </div>
             </div>
-        </>
+            <div className={navOpen} ref={mobNavContainer} data-wf-ignore="" onClick={overlayClick} >
+                <Navbar
+                    language={language}
+                    options={languageOptions}
+                    onChange={_onSelect}
+                    defaultOption={language}
+                />
+            </div>
+        </div>
     );
 }
 

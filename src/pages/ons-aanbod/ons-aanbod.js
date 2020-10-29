@@ -10,11 +10,6 @@ import FilterBox from './filter-box';
 import VehicleList from './vehicle-list';
 
 
-import {
-    useLocation
-} from "react-router-dom";
-
-
 const OnsAanbod = (props) => {
     const { dispatch, language } = props;
 

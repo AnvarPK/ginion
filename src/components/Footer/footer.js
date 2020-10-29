@@ -34,9 +34,11 @@ const Footer = ({ language }) => {
                                 <Navlinks language={language} />
                             </div>
                             <div>
-                                <div className="div-block-2 footer-social-links"><a href="https://www.instagram.com/giniongroup/?hl=nl" target="_blank"
-                                    className="link-block w-inline-block"><img src={Insta} alt="" className="image-3" /></a><a
-                                        href="https://www.facebook.com/giniongroup" target="_blank" className="link-block w-inline-block"><img src={FB} alt=""
+                                <div className="div-block-2 footer-social-links">
+                                    <a href="https://www.instagram.com/giniongroup/?hl=nl" target="_blank" rel="noopener noreferrer"
+                                        className="link-block w-inline-block"><img src={Insta} alt="" className="image-3" /></a>
+                                    <a
+                                        href="https://www.facebook.com/giniongroup" target="_blank" rel="noopener noreferrer" className="link-block w-inline-block"><img src={FB} alt=""
                                             className="image-3" /></a></div>
                             </div>
                         </div>
@@ -44,7 +46,10 @@ const Footer = ({ language }) => {
                 </div>
                 <div className="footer-bottom">
                     <div className="text-block-2">© 2020 - Ginion group</div>
-                    <div className="text-block-2">  <NavLink to={`/${language.value}/cookies`}>Cookies</NavLink></div>
+                    <div className="text-block-2">  <NavLink to={`/${language.value}/cookies`}>Cookies</NavLink> &nbsp;&nbsp;I&nbsp;&nbsp;
+                     <a href="https://www.yellowshape.com/nl/home" target="_blank" title="Webdesign Antwerpen"
+                      rel="noopener noreferrer" 
+                      >Website by Yellowshape</a></div>
                 </div>
             </footer>
         </>

@@ -48,6 +48,7 @@ export default (state = filtersReducerDefaultState, action) => {
                 ...state,
                 sell_price: action.sell_price
             };
+        case 'SET_FIRST_REG':
             return {
                 ...state,
                 first_reg: action.first_reg

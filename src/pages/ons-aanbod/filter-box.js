@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 import DropDownSelect from '../../components/drop-down-select';
 import {
-    Slider,
-    SliderInput,
-    SliderTrack,
-    SliderTrackHighlight,
-    SliderHandle,
-    SliderMarker,
+    Slider
 } from "@reach/slider";
 import "@reach/slider/styles.css";
 
-import {
-    useLocation
-} from "react-router-dom";
+// import {
+//     useLocation
+// } from "react-router-dom";
 import useFormatprice from '../../components/useFormatprice';
 // function useQuery() {
 //     return new URLSearchParams(useLocation().search);
@@ -22,7 +17,7 @@ const FilterBox = ({ language, makes, models, body_types, fuel_types, mileage, g
     // let query = useQuery();
     const maxMilage = mileage.reduce((max, item) => max >= item.value ? max : item.value, mileage[0].value);
     const maxSellPrice = sell_price.reduce((max, item) => max >= item.value ? max : item.value, sell_price[0].value);
-    const minSellPrice = sell_price.reduce((min, item) => min <= item.value ? min : item.value, sell_price[0].value);
+    // const minSellPrice = sell_price.reduce((min, item) => min <= item.value ? min : item.value, sell_price[0].value);
     const [milageVl, setMilageVl] = useState(maxMilage);
     const [sellPriceVL, setSellPriceVL] = useState(maxSellPrice);
 

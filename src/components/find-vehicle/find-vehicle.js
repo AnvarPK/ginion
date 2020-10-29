@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { getMakes, getModels } from '../../redux/selectors/dropDownOptions';
 import { setMake, setModel } from '../../redux/actions/filters';

@@ -3,7 +3,7 @@ import VectorI from './Vector-4.svg';
 
 const Equipment = ({ options, lan }) => (
     <div className="div-block-47">
-        <h5 className="heading-6 text-block-7">{lan == "nl" ? "UITRUSTING" : "Equipements"}</h5>
+        <h5 className="heading-6 text-block-7">{lan === "nl" ? "UITRUSTING" : "Equipements"}</h5>
         <div>
             <ul className="list-2 w-list-unstyled">
                 {[...options].map((option, i) => (

@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Helmet } from "react-helmet";
+
 
 import './cookies.css';
 
@@ -8,95 +10,95 @@ const Nl = () => (
         <div className="text-block-head">COOKIE POLICY</div>
         <div className="text-block-7">WAT IS EEN COOKIE ?</div>
         <p>
-        Een cookie is een klein tekstbestand waarin internetinstellingen opgeslagen zitten. Bijna elke website
-gebruikt cookies.
+            Een cookie is een klein tekstbestand waarin internetinstellingen opgeslagen zitten. Bijna elke website
+            gebruikt cookies.
         </p>
         <p>
-        Bij uw eerste bezoek aan een website wordt het door uw internetbrowser gedownload. Indien u deze
-website de volgende keer met hetzelfde apparaat bezoekt, wordt het cookie en de daarin opgeslagen
-informatie teruggestuurd naar ofwel de website die het geplaatst heeft (first party cookie) ofwel naar
-een andere website waartoe het behoort (third party cookie). Zo herkent de website dat hij met deze
-browser al eens werd opgeroepen, en verschilt in sommige gevallen de weergegeven content.
+            Bij uw eerste bezoek aan een website wordt het door uw internetbrowser gedownload. Indien u deze
+            website de volgende keer met hetzelfde apparaat bezoekt, wordt het cookie en de daarin opgeslagen
+            informatie teruggestuurd naar ofwel de website die het geplaatst heeft (first party cookie) ofwel naar
+            een andere website waartoe het behoort (third party cookie). Zo herkent de website dat hij met deze
+            browser al eens werd opgeroepen, en verschilt in sommige gevallen de weergegeven content.
         </p>
         <p>
-        Sommige cookies zijn erg nuttig omdat ze de online-ervaring bij een volgende bezoek aan een website
-kunnen verbeteren. Op voorwaarde dat u hetzelfde apparaat en dezelfde browser als de eerste keer
-gebruikt, herinneren cookies zich bv. uw voorkeuren, zeggen ze hoe u een pagina gebruikt en passen ze
-het aanbod aan uw persoonlijke interesses en behoeften aan.
+            Sommige cookies zijn erg nuttig omdat ze de online-ervaring bij een volgende bezoek aan een website
+            kunnen verbeteren. Op voorwaarde dat u hetzelfde apparaat en dezelfde browser als de eerste keer
+            gebruikt, herinneren cookies zich bv. uw voorkeuren, zeggen ze hoe u een pagina gebruikt en passen ze
+            het aanbod aan uw persoonlijke interesses en behoeften aan.
         </p>
         <p>
-        Afhankelijk van hun functie en het vooropgestelde doel, kunnen cookies worden onderverdeeld in 4
-categorieën*: strikt noodzakelijke cookies, functionele cookies, prestatiecookies, en cookies voor
-marketingdoeleinden.
+            Afhankelijk van hun functie en het vooropgestelde doel, kunnen cookies worden onderverdeeld in 4
+            categorieën*: strikt noodzakelijke cookies, functionele cookies, prestatiecookies, en cookies voor
+            marketingdoeleinden.
         </p>
         <div className="text-block-7">
-        UW COOKIE-INSTELLINGEN OP DEZE WEBSITE.
+            UW COOKIE-INSTELLINGEN OP DEZE WEBSITE.
         </div>
         <div className="text-block-sub">
-        COOKIES OP DEZE WEBSITE WAARVOOR GEEN TOESTEMMING VEREIST IS.
+            COOKIES OP DEZE WEBSITE WAARVOOR GEEN TOESTEMMING VEREIST IS.
         </div>
         <p>
-        Strikt noodzakelijke cookies, ook wel “strictly necessary” genoemd, garanderen functies zonder dewelke
-u deze website niet kunt gebruiken zoals gepland. Deze cookies worden uitsluitend gebruikt door Ginion
+            Strikt noodzakelijke cookies, ook wel “strictly necessary” genoemd, garanderen functies zonder dewelke
+            u deze website niet kunt gebruiken zoals gepland. Deze cookies worden uitsluitend gebruikt door Ginion
 
-Group en vallen onder de zogenaamde first party cookies. Ze worden alleen op uw computer opgeslagen
-voor de huidige browsersessie. Strikt noodzakelijke cookies zorgen er bijvoorbeeld voor dat u bij het
-oproepen van de voertuigconfigurator een versie krijgt, waarvan de bandbreedte van de
-datahoeveelheid overeenstemt met de door u gebruikte internetverbinding. Verder garanderen deze
-cookies bijvoorbeeld bij een paginawissel de functie van een overgang van http naar https, en dus
-blijven de verhoogde veiligheidsvereisten voor gegevensoverdracht behouden. Dit soort cookie bevat
-ook uw beslissing met betrekking tot het gebruik van cookies op onze website. Voor het gebruik van
-strikt noodzakelijke cookies is uw toestemming niet vereist.
+            Group en vallen onder de zogenaamde first party cookies. Ze worden alleen op uw computer opgeslagen
+            voor de huidige browsersessie. Strikt noodzakelijke cookies zorgen er bijvoorbeeld voor dat u bij het
+            oproepen van de voertuigconfigurator een versie krijgt, waarvan de bandbreedte van de
+            datahoeveelheid overeenstemt met de door u gebruikte internetverbinding. Verder garanderen deze
+            cookies bijvoorbeeld bij een paginawissel de functie van een overgang van http naar https, en dus
+            blijven de verhoogde veiligheidsvereisten voor gegevensoverdracht behouden. Dit soort cookie bevat
+            ook uw beslissing met betrekking tot het gebruik van cookies op onze website. Voor het gebruik van
+            strikt noodzakelijke cookies is uw toestemming niet vereist.
         </p>
         <p>
-        Strikt noodzakelijke cookies kunnen via de functie van deze website niet uitgeschakeld worden. U kunt
-cookies wel op elk ogenblik in uw browser uitschakelen.
+            Strikt noodzakelijke cookies kunnen via de functie van deze website niet uitgeschakeld worden. U kunt
+            cookies wel op elk ogenblik in uw browser uitschakelen.
         </p>
         <div className="text-block-7">
-        COOKIES WAARVOOR TOESTEMMING VEREIST IS
+            COOKIES WAARVOOR TOESTEMMING VEREIST IS
         </div>
 
         <p>
-        Cookies die niet strikt noodzakelijk zijn om de website te kunnen gebruiken, vervullen een belangrijke
-taak. Zonder deze cookies staan de functies die het mogelijk maken om comfortabel op onze website te
-surfen, zoals bijvoorbeeld vooraf ingevulde formulieren, niet meer ter beschikking. Door u ingegeven
-instellingen, zoals bijvoorbeeld de taalkeuze, kunnen niet worden opgeslagen en moeten dus op elke
-pagina opnieuw worden opgevraagd. Verder hebben wij niet langer de mogelijkheid om u individueel
-aangepaste aanbiedingen voor te stellen.
+            Cookies die niet strikt noodzakelijk zijn om de website te kunnen gebruiken, vervullen een belangrijke
+            taak. Zonder deze cookies staan de functies die het mogelijk maken om comfortabel op onze website te
+            surfen, zoals bijvoorbeeld vooraf ingevulde formulieren, niet meer ter beschikking. Door u ingegeven
+            instellingen, zoals bijvoorbeeld de taalkeuze, kunnen niet worden opgeslagen en moeten dus op elke
+            pagina opnieuw worden opgevraagd. Verder hebben wij niet langer de mogelijkheid om u individueel
+            aangepaste aanbiedingen voor te stellen.
         </p>
 
         <p>
-        Ginion Group integreert ook content van derden op deze website. Deze derdenaanbieders kunnen
-theoretisch cookies plaatsen wanneer u onze website bezoekt en daardoor bijvoorbeeld de informatie
-verkrijgen, dat u onze website hebt opgevraagd. Bezoek de websites van de derdenaanbieders voor
-meer informatie over hun gebruik van cookies. Wanneer u ervoor kiest om uw toestemming voor het
-gebruik van cookies met toestemming niet te geven of te herroepen, kunt u alleen gebruikmaken van
-die functies op onze website, die wij zonder deze cookies kunnen garanderen. Delen van de website die
-potentieel de technische mogelijkheid bieden om content van derden te integreren en dus third party
-cookies te plaatsen, zijn in dat geval voor u niet toegankelijk. Wilt u in dat geval de inhoud van de
-website toch gebruiken, dan is dit mogelijk op voorwaarde dat u instemt met het gebruik van cookies
-met toestemming. Gebruik daarvoor de op onze website op die plaats ter beschikking gestelde functie
-voor toestemming Wanneer u cookies principieel niet wilt toelaten, kunt u dit ook in uw browser
-instellen.
+            Ginion Group integreert ook content van derden op deze website. Deze derdenaanbieders kunnen
+            theoretisch cookies plaatsen wanneer u onze website bezoekt en daardoor bijvoorbeeld de informatie
+            verkrijgen, dat u onze website hebt opgevraagd. Bezoek de websites van de derdenaanbieders voor
+            meer informatie over hun gebruik van cookies. Wanneer u ervoor kiest om uw toestemming voor het
+            gebruik van cookies met toestemming niet te geven of te herroepen, kunt u alleen gebruikmaken van
+            die functies op onze website, die wij zonder deze cookies kunnen garanderen. Delen van de website die
+            potentieel de technische mogelijkheid bieden om content van derden te integreren en dus third party
+            cookies te plaatsen, zijn in dat geval voor u niet toegankelijk. Wilt u in dat geval de inhoud van de
+            website toch gebruiken, dan is dit mogelijk op voorwaarde dat u instemt met het gebruik van cookies
+            met toestemming. Gebruik daarvoor de op onze website op die plaats ter beschikking gestelde functie
+            voor toestemming Wanneer u cookies principieel niet wilt toelaten, kunt u dit ook in uw browser
+            instellen.
         </p>
 
         <p>
-        U vindt meer informatie over cookies waarvoor toestemming vereist is, de verschillende categorieën
-cookies, het gebruik van cookies en tracking op deze website, en hoe u cookies kan beheren en
-verwijderen hieronder.
+            U vindt meer informatie over cookies waarvoor toestemming vereist is, de verschillende categorieën
+            cookies, het gebruik van cookies en tracking op deze website, en hoe u cookies kan beheren en
+            verwijderen hieronder.
         </p>
 
         <div className="text-block-7">BEHEER EN VERWIJDEREN VAN COOKIES.</div>
 
 
         <p>
-        U kan cookies blokkeren en verwijderen via de instellingen van uw browser. Om cookies te beheren,
-laten de meeste browsers u toe om alle cookies te weigeren of toe te staan, of om enkel bepaalde types
-cookies toe te staan.
+            U kan cookies blokkeren en verwijderen via de instellingen van uw browser. Om cookies te beheren,
+            laten de meeste browsers u toe om alle cookies te weigeren of toe te staan, of om enkel bepaalde types
+            cookies toe te staan.
         </p>
         <p>
-        Hoe u cookies beheert en verwijdert vindt u in de helpfunctie van uw browser. U vindt meer informatie
-voor de meest courante browsers hieronder:
+            Hoe u cookies beheert en verwijdert vindt u in de helpfunctie van uw browser. U vindt meer informatie
+            voor de meest courante browsers hieronder:
         </p>
 
         <p>Indien u het gebruik van cookies wenst te beperken, zal u niet alle interactieve functies van onze
@@ -113,46 +115,46 @@ website kunnen gebruiken.</p>
 
         <div className="text-block-7">CATEGORIEËN.</div>
         <p>
-        Afhankelijk van hun functie en het vooropgestelde doel, kunnen cookies worden onderverdeeld in 4
-categorieën*: strikt noodzakelijke cookies, functionele cookies, prestatiecookies, en cookies voor
-marketingdoeleinden.
+            Afhankelijk van hun functie en het vooropgestelde doel, kunnen cookies worden onderverdeeld in 4
+            categorieën*: strikt noodzakelijke cookies, functionele cookies, prestatiecookies, en cookies voor
+            marketingdoeleinden.
         </p>
 
         <p className="small-head"> <b>Strikt noodzakelijke cookies</b></p>
-        <p> 
-        Strikt noodzakelijke cookies zijn nodig opdat u een website kunt bezoeken en gebruiken. Zonder deze
-cookies kunnen de functies van de website niet worden gegarandeerd, bijvoorbeeld dat de tijdens een
-bezoek uitgevoerde handelingen (bv. tekstingave of voertuigconfiguratie) behouden blijven, ook
-wanneer u tussen verschillende pagina’s navigeert.
+        <p>
+            Strikt noodzakelijke cookies zijn nodig opdat u een website kunt bezoeken en gebruiken. Zonder deze
+            cookies kunnen de functies van de website niet worden gegarandeerd, bijvoorbeeld dat de tijdens een
+            bezoek uitgevoerde handelingen (bv. tekstingave of voertuigconfiguratie) behouden blijven, ook
+            wanneer u tussen verschillende pagina’s navigeert.
         </p>
         <p className="small-head"><b> Functionele cookies</b></p>
-        <p> 
-        Functionele cookies maken het een website mogelijk om reeds ingegeven gegevens (zoals bv.
-gebruikersnaam, taalkeuze of woonplaats) op te slaan en de gebruiker verbeterde, persoonlijkere
-functies aan te bieden. Een website zou bijvoorbeeld lokale prijsrelevante btw-informatie kunnen
-aanbieden wanneer hij een cookie gebruikt om de regio op te slaan waarin de gebruiker zich bevindt.
-Functionele cookies worden daarnaast ook gebruikt om gevraagde functies zoals het afspelen van
-video’s mogelijk te maken. Deze cookies verzamelen anonieme informatie, ze volgen niet uw
-bewegingen op andere websites.
+        <p>
+            Functionele cookies maken het een website mogelijk om reeds ingegeven gegevens (zoals bv.
+            gebruikersnaam, taalkeuze of woonplaats) op te slaan en de gebruiker verbeterde, persoonlijkere
+            functies aan te bieden. Een website zou bijvoorbeeld lokale prijsrelevante btw-informatie kunnen
+            aanbieden wanneer hij een cookie gebruikt om de regio op te slaan waarin de gebruiker zich bevindt.
+            Functionele cookies worden daarnaast ook gebruikt om gevraagde functies zoals het afspelen van
+            video’s mogelijk te maken. Deze cookies verzamelen anonieme informatie, ze volgen niet uw
+            bewegingen op andere websites.
         </p>
 
         <p className="small-head"><b>Prestatiecookies</b></p>
-        <p> 
-        Prestatiecookies verzamelen informatie over de gebruikswijze van een website – bijvoorbeeld welke
-pagina’s een bezoeker het vaakst opvraagt en of hij foutmeldingen van websites ontvangt. Deze cookies
-slaan geen informatie op die de gebruiker kan identificeren. De verzamelde informatie wordt gebruikt
-voor rapporten in geaggregeerde en anonieme vorm. Deze cookies worden alleen gebruikt om de
-prestaties van een website en dus de beleving van de gebruiker te verbeteren.
+        <p>
+            Prestatiecookies verzamelen informatie over de gebruikswijze van een website – bijvoorbeeld welke
+            pagina’s een bezoeker het vaakst opvraagt en of hij foutmeldingen van websites ontvangt. Deze cookies
+            slaan geen informatie op die de gebruiker kan identificeren. De verzamelde informatie wordt gebruikt
+            voor rapporten in geaggregeerde en anonieme vorm. Deze cookies worden alleen gebruikt om de
+            prestaties van een website en dus de beleving van de gebruiker te verbeteren.
         </p>
 
         <p className="small-head"> <b>Cookies voor marketingdoeleinden</b></p>
-        <p> 
-        Cookies voor marketingdoeleinden worden gebruikt om gerichte, voor de gebruiker relevante en aan
-zijn interesses aangepaste reclameboodschappen weer te geven. Ze worden ook gebruikt om de
-weergavefrequentie van een reclameboodschap te beperken en de doelmatigheid van
-reclamecampagnes te meten. Ze registreren of men een website al dan niet heeft bezocht. Deze
-informatie kan worden gedeeld met derden, zoals bv. adverteerders. Cookies ter verbetering van de
-doelgroepaanspreking en reclame worden vaak gekoppeld aan bijkomende functies van derden.
+        <p>
+            Cookies voor marketingdoeleinden worden gebruikt om gerichte, voor de gebruiker relevante en aan
+            zijn interesses aangepaste reclameboodschappen weer te geven. Ze worden ook gebruikt om de
+            weergavefrequentie van een reclameboodschap te beperken en de doelmatigheid van
+            reclamecampagnes te meten. Ze registreren of men een website al dan niet heeft bezocht. Deze
+            informatie kan worden gedeeld met derden, zoals bv. adverteerders. Cookies ter verbetering van de
+            doelgroepaanspreking en reclame worden vaak gekoppeld aan bijkomende functies van derden.
         </p>
 
     </div>
@@ -180,10 +182,7 @@ const Fr = () => (
             COOKIES NE NÉCESSITANT PAS DE CONSENTEMENT SUR CE SITE WEB.
         </div>
         <p>
-            Cookies indispensables, dits « strictement nécessaires » assurant des fonctions sans lesquelles il vous serait impossible d’utiliser cette page web comme prévu. Ces cookies sont utilisés exclusivement par Ginion Group, d’où leur appellation «
-        </p>
-        <p>
-            cookies propres ». Ils sont uniquement enregistrés sur votre ordinateur pendant la durée de la session du navigateur. Lorsque vous appelez le configurateur de véhicule, les cookies strictement nécessaires veillent par exemple à vous envoyer une version dont le poids de données soit compatible avec la largeur de bande de votre connexion Internet. Lors d’un changement de page, ces cookies assurent par exemple le passage du protocole http à https en veillant à respecter les exigences de sécurité élevées de la transmission de données. Ce type de cookie mémorise notamment votre choix concernant l’utilisation de cookies sur notre page web. L’utilisation de cookies strictement nécessaires ne nécessite pas votre autorisation.
+            Cookies indispensables, dits « strictement nécessaires » assurant des fonctions sans lesquelles il vous serait impossible d’utiliser cette page web comme prévu. Ces cookies sont utilisés exclusivement par Ginion Group, d’où leur appellation « cookies propres ». Ils sont uniquement enregistrés sur votre ordinateur pendant la durée de la session du navigateur. Lorsque vous appelez le configurateur de véhicule, les cookies strictement nécessaires veillent par exemple à vous envoyer une version dont le poids de données soit compatible avec la largeur de bande de votre connexion Internet. Lors d’un changement de page, ces cookies assurent par exemple le passage du protocole http à https en veillant à respecter les exigences de sécurité élevées de la transmission de données. Ce type de cookie mémorise notamment votre choix concernant l’utilisation de cookies sur notre page web. L’utilisation de cookies strictement nécessaires ne nécessite pas votre autorisation.
         </p>
         <p>
             Les cookies strictement nécessaires ne peuvent pas être désactivés par la fonction de cette page. Vous pouvez néanmoins à tout moment désactiver les cookies en général à partir de votre navigateur.
@@ -238,6 +237,10 @@ const Fr = () => (
 const Cookies = ({ language }) => {
     return (
         <>
+            <Helmet>
+                <title>{language.value === "nl" ? "Ons cookiebeleid | Ginion Used Cars" : "Directives Ginion Used Cars aux cookies"}</title>
+                <meta name="description" content={language.value === "nl" ? "Cookies zijn tekstbestandjes die bij een bezoek aan Ginion Used Cars op je computer of op je mobiel apparaat kunnen worden bewaard. Lees er hier meer over!" : ""} />
+            </Helmet>
             <div className="cookiesPage">
 
                 <div className="text-banner">

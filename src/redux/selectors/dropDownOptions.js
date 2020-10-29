@@ -1,4 +1,4 @@
-import vehicles from "./vehicles";
+// import vehicles from "./vehicles";
 
 
 const getData = (vehicles, tag, make) => {

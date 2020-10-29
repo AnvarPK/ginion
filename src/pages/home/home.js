@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from "react-helmet";
 import { connect } from 'react-redux';
 import {
@@ -17,8 +17,8 @@ import './home.css';
 import { ons } from '../../components/navItems';
 
 const Home = ({ makes, models, language, mostViewed, dispatch }) => {
-    const [urlMake, setUrlMake] = useState(''),
-        [urlModel, setUrlModel] = useState('');
+    // const [urlMake, setUrlMake] = useState(''),
+        // [urlModel, setUrlModel] = useState('');
 
     const handleDropdownChange = (value, tag) => {
         if (tag === "make") {
