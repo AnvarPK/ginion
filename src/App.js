@@ -70,6 +70,7 @@ function App({ lan }) {
             <Route path="/fr/garanties-services" component={GarantiesDiensten} />
             <Route path="/fr/financement" component={Financiering} />
             <Route path="/fr/a-propos-de-nous" component={OverOns} />
+            <Route path="/fr/contact" component={Contact} />
             <Route path="/fr/cookies" component={Cookies} />
 
             <NotFoundRoute />
